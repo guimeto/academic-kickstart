@@ -40,3 +40,24 @@ Copyright 2017-present [George Cushen](https://georgecushen.com).
 Released under the [MIT](https://github.com/sourcethemes/academic-kickstart/blob/master/LICENSE.md) license.
 
 [![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/academic-kickstart/readme?pixel)](https://github.com/igrigorik/ga-beacon)
+
+
+# POUR LANCER LE SERVEUR DE DEVELOPPEMENT
+* ouvrir bash.exe en tant qu'administrateur
+* cd /mnt/c/Users/guill/mon_site
+* hugo server
+
+# POUR AJOUTER UN NOUVEAU POST AVEC UN NOTEBOOK JUPYTER
+* cd <MY_WEBSITE_FOLDER>
+* hugo new  --kind post post/<nom_du_post>
+* cd <MY_WEBSITE_FOLDER>/content/post/<nom_du_post>/
+* télécharger le <fichier>.ipynb depuis github dans le dossier du nouveau post
+* jupyter nbconvert <fichier>.ipynb --to markdown --NbConvertApp.output_files_dir=.
+* cat <fichier>.md | tee -a index.md
+* rm <fichier>.md
+pour plus dinfos https://sourcethemes.com/academic/docs/jupyter/
+
+# POUR SAUVEGARDER TES MODIFS 
+* depuis <MY_WEBSITE_FOLDER> git add .
+* git commit -m"ton message"
+* git push
