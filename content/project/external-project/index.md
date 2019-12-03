@@ -1,12 +1,12 @@
 ---
-title: External Project
-summary: An example of linking directly to an external project website using `external_link`.
+title: RIISQ 
+summary: Réseau Inondations InterSectoriel du Québec.
 tags:
-- Demo
-date: "2016-04-27T00:00:00Z"
+- Inondations
+date: "2019-12-02T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
-external_link: http://example.org
+external_link: https://www.riisq.ca/
 
 image:
   caption: Photo by Toa Heftiba on Unsplash

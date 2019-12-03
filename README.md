@@ -61,3 +61,6 @@ pour plus dinfos https://sourcethemes.com/academic/docs/jupyter/
 * depuis <MY_WEBSITE_FOLDER> git add .
 * git commit -m"ton message"
 * git push
+
+# COMMANDE POUR REVENIR A QUAND CA MARCHAIT 
+* git reset --hard
