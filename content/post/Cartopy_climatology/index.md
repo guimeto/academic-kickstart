@@ -163,9 +163,6 @@ df = pd.DataFrame(list(zip(names, latitudes, longitudes)),
 df
 ```
 
-
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
