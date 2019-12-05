@@ -163,111 +163,21 @@ df = pd.DataFrame(list(zip(names, latitudes, longitudes)),
 df
 ```
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Names</th>
-      <th>latitudes</th>
-      <th>longitudes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Whitehorse</td>
-      <td>60.721188</td>
-      <td>-135.056839</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Yellowknife</td>
-      <td>62.453972</td>
-      <td>-114.371788</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Iqaluit</td>
-      <td>63.748611</td>
-      <td>-68.519722</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Victoria</td>
-      <td>48.407326</td>
-      <td>-123.329773</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Edmonton</td>
-      <td>53.631611</td>
-      <td>-113.323975</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Regina</td>
-      <td>50.445210</td>
-      <td>-104.618896</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Winnipeg</td>
-      <td>49.895077</td>
-      <td>-97.138451</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Toronto</td>
-      <td>43.651070</td>
-      <td>-79.347015</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Ottawa</td>
-      <td>45.424721</td>
-      <td>-75.695000</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Quebec</td>
-      <td>46.829853</td>
-      <td>-71.254028</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Halifax</td>
-      <td>44.651070</td>
-      <td>-63.582687</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Charlottetown</td>
-      <td>46.238888</td>
-      <td>-63.129166</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>St-John s</td>
-      <td>47.560539</td>
-      <td>-52.712830</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+|    | Names         |   latitudes |   longitudes |
+|---:|:--------------|------------:|-------------:|
+|  0 | Whitehorse    |     60.7212 |    -135.057  |
+|  1 | Yellowknife   |     62.454  |    -114.372  |
+|  2 | Iqaluit       |     63.7486 |     -68.5197 |
+|  3 | Victoria      |     48.4073 |    -123.33   |
+|  4 | Edmonton      |     53.6316 |    -113.324  |
+|  5 | Regina        |     50.4452 |    -104.619  |
+|  6 | Winnipeg      |     49.8951 |     -97.1385 |
+|  7 | Toronto       |     43.6511 |     -79.347  |
+|  8 | Ottawa        |     45.4247 |     -75.695  |
+|  9 | Quebec        |     46.8299 |     -71.254  |
+| 10 | Halifax       |     44.6511 |     -63.5827 |
+| 11 | Charlottetown |     46.2389 |     -63.1292 |
+| 12 | St-John s     |     47.5605 |     -52.7128 |
 
 
 
