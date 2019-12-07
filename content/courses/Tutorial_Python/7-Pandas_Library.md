@@ -1,3 +1,4 @@
+
 ---
 title: 7 Pandas library
 linktitle: 
@@ -10,12 +11,9 @@ menu:
     parent: Python tutorial 
     weight: 7
 ---
-
+<img src="/img/pandas.png" alt="Indentation" width="30%" height="30%">
 ![image0](/img/pandas.png)
-<img src="./figures/pandas.png" alt="Indentation" width="30%" height="30%">
-
-
-
+  
 
 Pandas is a library specialized in data manipulation. This library contains a set of optimized functions for handling large datasets. It allows to create and export tables of data from text files (separators, .csv, fixed format, compressed), binary (HDF5 with Pytable), HTML, XML, JSON, MongoDB, SQL ...
 
@@ -221,100 +219,13 @@ To create the dataframe, we use the Pandas <b> DataFrame () </b> function. It is
 dataframe = pd.DataFrame(stations, columns=["Amont Max", "Amont Min", "Amont Mean", "Aval Max", "Aval Max", "Aval Mean", "Debit Mean", "Debit Max","Debit Min"])
 dataframe
 ```
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Amont Max</th>
-      <th>Amont Min</th>
-      <th>Amont Mean</th>
-      <th>Aval Max</th>
-      <th>Aval Max</th>
-      <th>Aval Mean</th>
-      <th>Debit Mean</th>
-      <th>Debit Max</th>
-      <th>Debit Min</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>39.70</td>
-      <td>39.09</td>
-      <td>39.556452</td>
-      <td>23.23</td>
-      <td>22.50</td>
-      <td>22.859032</td>
-      <td>2390.526129</td>
-      <td>3164.97</td>
-      <td>1673.80</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>41.16</td>
-      <td>40.96</td>
-      <td>41.088065</td>
-      <td>23.22</td>
-      <td>22.43</td>
-      <td>22.758387</td>
-      <td>2227.282903</td>
-      <td>3008.18</td>
-      <td>1697.87</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>41.15</td>
-      <td>41.05</td>
-      <td>41.113226</td>
-      <td>23.35</td>
-      <td>22.87</td>
-      <td>23.155484</td>
-      <td>2851.274194</td>
-      <td>3231.80</td>
-      <td>2367.85</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>41.09</td>
-      <td>40.61</td>
-      <td>40.968387</td>
-      <td>23.78</td>
-      <td>22.70</td>
-      <td>23.032581</td>
-      <td>2635.037742</td>
-      <td>3967.33</td>
-      <td>2069.65</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>41.09</td>
-      <td>39.60</td>
-      <td>40.269677</td>
-      <td>24.24</td>
-      <td>22.87</td>
-      <td>23.645806</td>
-      <td>3924.234516</td>
-      <td>5407.32</td>
-      <td>2417.89</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+|    |   Amont Max |   Amont Min |   Amont Mean |   Aval Max |   Aval Max |   Aval Mean |   Debit Mean |   Debit Max |   Debit Min |
+|---:|------------:|------------:|-------------:|-----------:|-----------:|------------:|-------------:|------------:|------------:|
+|  0 |       39.7  |       39.09 |      39.5565 |      23.23 |      22.5  |     22.859  |      2390.53 |     3164.97 |     1673.8  |
+|  1 |       41.16 |       40.96 |      41.0881 |      23.22 |      22.43 |     22.7584 |      2227.28 |     3008.18 |     1697.87 |
+|  2 |       41.15 |       41.05 |      41.1132 |      23.35 |      22.87 |     23.1555 |      2851.27 |     3231.8  |     2367.85 |
+|  3 |       41.09 |       40.61 |      40.9684 |      23.78 |      22.7  |     23.0326 |      2635.04 |     3967.33 |     2069.65 |
+|  4 |       41.09 |       39.6  |      40.2697 |      24.24 |      22.87 |     23.6458 |      3924.23 |     5407.32 |     2417.89 |
 
 
 
@@ -332,104 +243,13 @@ A csv document can be read with the <b> read_table () </b> function, with the se
 barrage = pd.read_table("./DATA/DATA_EXTREME_Carillon_1963_2017_5.csv", sep=",")
 barrage.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Amont_max</th>
-      <th>Amont_min</th>
-      <th>Amont_moyen</th>
-      <th>Aval_max</th>
-      <th>Aval_min</th>
-      <th>Aval_moyen</th>
-      <th>Debit_Moyen</th>
-      <th>Debit_max</th>
-      <th>Debit_min</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>39.70</td>
-      <td>39.09</td>
-      <td>39.556452</td>
-      <td>23.23</td>
-      <td>22.50</td>
-      <td>22.859032</td>
-      <td>2390.526129</td>
-      <td>3164.97</td>
-      <td>1673.80</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>41.16</td>
-      <td>40.96</td>
-      <td>41.088065</td>
-      <td>23.22</td>
-      <td>22.43</td>
-      <td>22.758387</td>
-      <td>2227.282903</td>
-      <td>3008.18</td>
-      <td>1697.87</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>41.15</td>
-      <td>41.05</td>
-      <td>41.113226</td>
-      <td>23.35</td>
-      <td>22.87</td>
-      <td>23.155484</td>
-      <td>2851.274194</td>
-      <td>3231.80</td>
-      <td>2367.85</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>41.09</td>
-      <td>40.61</td>
-      <td>40.968387</td>
-      <td>23.78</td>
-      <td>22.70</td>
-      <td>23.032581</td>
-      <td>2635.037742</td>
-      <td>3967.33</td>
-      <td>2069.65</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>41.09</td>
-      <td>39.60</td>
-      <td>40.269677</td>
-      <td>24.24</td>
-      <td>22.87</td>
-      <td>23.645806</td>
-      <td>3924.234516</td>
-      <td>5407.32</td>
-      <td>2417.89</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+|    |   Amont_max |   Amont_min |   Amont_moyen |   Aval_max |   Aval_min |   Aval_moyen |   Debit_Moyen |   Debit_max |   Debit_min |
+|---:|------------:|------------:|--------------:|-----------:|-----------:|-------------:|--------------:|------------:|------------:|
+|  0 |       39.7  |       39.09 |       39.5565 |      23.23 |      22.5  |      22.859  |      2390.53  |     3164.97 |     1673.8  |
+|  1 |       41.16 |       40.96 |       41.0881 |      23.22 |      22.43 |      22.7584 |      2227.28  |     3008.18 |     1697.87 |
+|  2 |       41.15 |       41.05 |       41.1132 |      23.35 |      22.87 |      23.1555 |      2851.27  |     3231.8  |     2367.85 |
+|  3 |       41.09 |       40.61 |       40.9684 |      23.78 |      22.7  |      23.0326 |      2635.04  |     3967.33 |     2069.65 |
+|  4 |       41.09 |       39.6  |       40.2697 |      24.24 |      22.87 |      23.6458 |      3924.23  |     5407.32 |     2417.89 |
 
 However, if we know that our file to read is a csv, we can use a simpler function of Pandas which is <b> read_csv () </b>.
 
@@ -465,69 +285,15 @@ df2 = pd.read_csv(file1, skiprows=1, usecols=[0, 1, 3], names=col_names)
 ```python
 df2.head()
 ```
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Variable1</th>
-      <th>Variable2</th>
-      <th>Variable3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>39.70</td>
-      <td>39.09</td>
-      <td>23.23</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>41.16</td>
-      <td>40.96</td>
-      <td>23.22</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>41.15</td>
-      <td>41.05</td>
-      <td>23.35</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>41.09</td>
-      <td>40.61</td>
-      <td>23.78</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>41.09</td>
-      <td>39.60</td>
-      <td>24.24</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+|    |   Variable1 |   Variable2 |   Variable3 |
+|---:|------------:|------------:|------------:|
+|  0 |       39.7  |       39.09 |       23.23 |
+|  1 |       41.16 |       40.96 |       23.22 |
+|  2 |       41.15 |       41.05 |       23.35 |
+|  3 |       41.09 |       40.61 |       23.78 |
+|  4 |       41.09 |       39.6  |       24.24 |
 
 ### <b>- c)</b> Create Dataframe loading ascii file: 
-
-
 ```python
 with open('./DATA/Daily_Precipitation_1963-2017.txt', 'r') as file:
         rows = file.read() 
@@ -540,57 +306,21 @@ with open('./DATA/Daily_Precipitation_1963-2017.txt', 'r') as file:
 dataset = [float(row) for row in rows.split()]   
 df3 = pd.DataFrame({"Precipitation" : dataset})
 ```
-
-
 ```python
 df3.head()
 ```
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Precipitation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+|       |   Precipitation |
+|------:|----------------:|
+|     0 |             0   |
+|     1 |             0   |
+|     2 |             0   |
+|     3 |             0   |
+|     4 |             0   |
+|     5 |             0   |
+|     6 |             0   |
+|     7 |             0   |
+|     8 |             1.3 |
 
 
 ### <b>- d)</b> Create Dataframe loading excell (.xls) file: <b>read_excel()</b> function
@@ -607,119 +337,12 @@ We will define the "Province" column as index of our DataFrame.
 df4 = pd.read_excel("./DATA/Homog_Temperature_Stations.xls", index_col=0,skiprows = range(0, 3))
 df4.head()
 ```
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              |
+| BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |
+| BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              |
+| BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |
 
 
 ### 7.2.2  Access data from DataFrames 
@@ -730,112 +353,13 @@ The first thing to do when opening a new dataset is print out a few rows. We acc
 dataframe = pd.read_excel("./DATA/Homog_Temperature_Stations.xls", skiprows = range(0, 3))
 dataframe.head()
 ```
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>BC</td>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>BC</td>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>BC</td>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>BC</td>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>BC</td>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+|     | Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|----:|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+|   0 | BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              |
+|   1 | BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |
+|   2 | BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              |
+|   3 | BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |
+|   4 | BC     | BELLA COOLA      | 1060841 |         1895 |           5 |         2017 |          11 |       52.37 |      -126.68 |         18 | Y              |
 
 
 
@@ -846,115 +370,14 @@ To see the last five rows use  <b>.tail()</b> method. tail() also accepts a numb
 dataframe = pd.read_excel("./DATA/Homog_Temperature_Stations.xls", skiprows = range(0, 3))
 dataframe.tail()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>333</th>
-      <td>NL</td>
-      <td>PORT AUXBASQUES</td>
-      <td>8402975</td>
-      <td>1909</td>
-      <td>2</td>
-      <td>2017</td>
-      <td>9</td>
-      <td>47.58</td>
-      <td>-58.97</td>
-      <td>40</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>334</th>
-      <td>NL</td>
-      <td>ST ANTHONY</td>
-      <td>8403389</td>
-      <td>1946</td>
-      <td>6</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>51.37</td>
-      <td>-55.60</td>
-      <td>33</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>335</th>
-      <td>NL</td>
-      <td>ST JOHN'S</td>
-      <td>8403505</td>
-      <td>1874</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>47.62</td>
-      <td>-52.75</td>
-      <td>141</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>336</th>
-      <td>NL</td>
-      <td>STEPHENVILLE</td>
-      <td>8403801</td>
-      <td>1895</td>
-      <td>6</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>48.53</td>
-      <td>-58.55</td>
-      <td>26</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>337</th>
-      <td>NL</td>
-      <td>WABUSH LAKE</td>
-      <td>8504177</td>
-      <td>1960</td>
-      <td>11</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>52.93</td>
-      <td>-66.87</td>
-      <td>551</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+|     | Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|----:|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| 332 | NL     | PLUM POINT       | 8402958 |         1972 |           7 |         2016 |           6 |       51.07 |       -56.88 |          6 | N              |
+| 333 | NL     | PORT AUXBASQUES  | 8402975 |         1909 |           2 |         2017 |           9 |       47.58 |       -58.97 |         40 | N              |
+| 334 | NL     | ST ANTHONY       | 8403389 |         1946 |           6 |         2017 |          12 |       51.37 |       -55.6  |         33 | Y              |
+| 335 | NL     | ST JOHN'S        | 8403505 |         1874 |           1 |         2017 |          12 |       47.62 |       -52.75 |        141 | Y              |
+| 336 | NL     | STEPHENVILLE     | 8403801 |         1895 |           6 |         2017 |          12 |       48.53 |       -58.55 |         26 | Y              |
+| 337 | NL     | WABUSH LAKE      | 8504177 |         1960 |          11 |         2017 |          12 |       52.93 |       -66.87 |        551 | Y              |
 
 
 
@@ -964,135 +387,21 @@ Before exploring a Dataframe, you can modify the index to make it easier to anal
 ```python
 dataframe_Prov_index = dataframe.set_index("Prov")
 ```
-
-
 ```python
 dataframe_Prov_index.head()
 ```
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              |
+| BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |
+| BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              |
+| BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |
+| BC     | BELLA COOLA      | 1060841 |         1895 |           5 |         2017 |          11 |       52.37 |      -126.68 |         18 | Y              |
 
 We can directly select a column from a Dataframe: 
-
-
 ```python
 dataframe_Prov_index['Nom de station'].head()
 ```
-
-
     Prov
     BC        AGASSIZ
     BC          ATLIN
@@ -1133,192 +442,24 @@ dataframe_Prov_index.iloc[0,0]
 dataframe_Prov_index.iloc[0:4,:]
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              |
+| BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |
+| BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              |
+| BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |
 
 ```python
 # Example3: iloc: # select all rows and 4 specific columns 
 dataframe_Prov_index.iloc[:,0:4].head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |
+|:-------|:-----------------|:--------|-------------:|------------:|
+| BC     | AGASSIZ          | 1100120 |         1893 |           1 |
+| BC     | ATLIN            | 1200560 |         1905 |           8 |
+| BC     | BARKERVILLE      | 1090660 |         1888 |           2 |
+| BC     | BEAVERDELL       | 1130771 |         1939 |           1 |
+| BC     | BELLA COOLA      | 1060841 |         1895 |           5 |
 
 
 ```python
@@ -1344,67 +485,13 @@ dataframe_Prov_index.iloc[:,1:3].head()
     BC        53.07     -121.52      1265            N  
     
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>stnid</th>
-      <th>année déb.</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>1100120</td>
-      <td>1893</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>1200560</td>
-      <td>1905</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>1090660</td>
-      <td>1888</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>1130771</td>
-      <td>1939</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>1060841</td>
-      <td>1895</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+| Prov   | stnid   |   année déb. |
+|:-------|:--------|-------------:|
+| BC     | 1100120 |         1893 |
+| BC     | 1200560 |         1905 |
+| BC     | 1090660 |         1888 |
+| BC     | 1130771 |         1939 |
+| BC     | 1060841 |         1895 |
 
    #### b- La méthode loc():
    
@@ -1447,461 +534,63 @@ dataframe_Prov_index.loc[:,"Nom de station"].head()
 # Example2: loc: select all rows for a specific index name
 dataframe_Prov_index.loc["QC",:].head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>QC</th>
-      <td>AMOS</td>
-      <td>709CEE9</td>
-      <td>1913</td>
-      <td>6</td>
-      <td>2017</td>
-      <td>8</td>
-      <td>48.57</td>
-      <td>-78.13</td>
-      <td>305</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>QC</th>
-      <td>BAGOTVILLE</td>
-      <td>7060400</td>
-      <td>1880</td>
-      <td>11</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>48.33</td>
-      <td>-71.00</td>
-      <td>159</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>QC</th>
-      <td>BAIE COMEAU</td>
-      <td>704S001</td>
-      <td>1965</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.13</td>
-      <td>-68.20</td>
-      <td>130</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>QC</th>
-      <td>BEAUCEVILLE</td>
-      <td>7027283</td>
-      <td>1913</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>8</td>
-      <td>46.15</td>
-      <td>-70.70</td>
-      <td>168</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>QC</th>
-      <td>BELLETERRE</td>
-      <td>7080600</td>
-      <td>1951</td>
-      <td>9</td>
-      <td>2004</td>
-      <td>4</td>
-      <td>47.38</td>
-      <td>-78.70</td>
-      <td>322</td>
-      <td>N</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| QC     | AMOS             | 709CEE9 |         1913 |           6 |         2017 |           8 |       48.57 |       -78.13 |        305 | Y              |
+| QC     | BAGOTVILLE       | 7060400 |         1880 |          11 |         2017 |          12 |       48.33 |       -71    |        159 | Y              |
+| QC     | BAIE COMEAU      | 704S001 |         1965 |           1 |         2017 |          12 |       49.13 |       -68.2  |        130 | Y              |
+| QC     | BEAUCEVILLE      | 7027283 |         1913 |           8 |         2017 |           8 |       46.15 |       -70.7  |        168 | Y              |
+| QC     | BELLETERRE       | 7080600 |         1951 |           9 |         2004 |           4 |       47.38 |       -78.7  |        322 | N              |
 
 ```python
 # Example3: Select all rows for multiple columns, say list[]
 
 dataframe_Prov_index.loc[:,["Nom de station", "année déb.", "année fin."]].head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>année déb.</th>
-      <th>année fin.</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1893</td>
-      <td>2017</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1905</td>
-      <td>2017</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1888</td>
-      <td>2015</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1939</td>
-      <td>2006</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1895</td>
-      <td>2017</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+| Prov   | Nom de station   |   année déb. |   année fin. |
+|:-------|:-----------------|-------------:|-------------:|
+| BC     | AGASSIZ          |         1893 |         2017 |
+| BC     | ATLIN            |         1905 |         2017 |
+| BC     | BARKERVILLE      |         1888 |         2015 |
+| BC     | BEAVERDELL       |         1939 |         2006 |
+| BC     | BELLA COOLA      |         1895 |         2017 |
 
 ```python
 # Example4: Select few rows for multiple columns, say list[]
 dataframe_Prov_index.loc[['BC','QC'],["Nom de station", "année déb.", "année fin."]].head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>année déb.</th>
-      <th>année fin.</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1893</td>
-      <td>2017</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1905</td>
-      <td>2017</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1888</td>
-      <td>2015</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1939</td>
-      <td>2006</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1895</td>
-      <td>2017</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+| Prov   | Nom de station   |   année déb. |   année fin. |
+|:-------|:-----------------|-------------:|-------------:|
+| BC     | AGASSIZ          |         1893 |         2017 |
+| BC     | ATLIN            |         1905 |         2017 |
+| BC     | BARKERVILLE      |         1888 |         2015 |
+| BC     | BEAVERDELL       |         1939 |         2006 |
+| BC     | BELLA COOLA      |         1895 |         2017 |
 
 ```python
 # Example 5: # for getting values with a boolean array
 
 (dataframe_Prov_index.loc['BC',["année déb."]]>1900).head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>année déb.</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+| Prov   |   année déb. |
+|:-------|-------------:|
+| BC     |            False |
+| BC     |            True |
+| BC     |            False |
+| BC     |            True |
+| BC     |            False |
 
 ```python
 # Example 6: # for getting values with a boolean array
 dataframe_Prov_index.loc[dataframe_Prov_index["année fin."]>2015,:].head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BLIND CHANNEL</td>
-      <td>1021480</td>
-      <td>1958</td>
-      <td>7</td>
-      <td>2016</td>
-      <td>2</td>
-      <td>50.42</td>
-      <td>-125.50</td>
-      <td>23</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BLUE RIVER</td>
-      <td>1160899</td>
-      <td>1946</td>
-      <td>9</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>52.13</td>
-      <td>-119.28</td>
-      <td>683</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              |
+| BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |
+| BC     | BELLA COOLA      | 1060841 |         1895 |           5 |         2017 |          11 |       52.37 |      -126.68 |         18 | Y              |
+| BC     | BLIND CHANNEL    | 1021480 |         1958 |           7 |         2016 |           2 |       50.42 |      -125.5  |         23 | N              |
+| BC     | BLUE RIVER       | 1160899 |         1946 |           9 |         2017 |          12 |       52.13 |      -119.28 |        683 | Y              |
 
 
 ```python
@@ -1909,122 +598,13 @@ dataframe_Prov_index.loc[dataframe_Prov_index["année fin."]>2015,:].head()
 df2 = dataframe_Prov_index.loc["QC",:]
 df2.loc[df2["année fin."]==2017,:].head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>QC</th>
-      <td>AMOS</td>
-      <td>709CEE9</td>
-      <td>1913</td>
-      <td>6</td>
-      <td>2017</td>
-      <td>8</td>
-      <td>48.57</td>
-      <td>-78.13</td>
-      <td>305</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>QC</th>
-      <td>BAGOTVILLE</td>
-      <td>7060400</td>
-      <td>1880</td>
-      <td>11</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>48.33</td>
-      <td>-71.00</td>
-      <td>159</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>QC</th>
-      <td>BAIE COMEAU</td>
-      <td>704S001</td>
-      <td>1965</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.13</td>
-      <td>-68.20</td>
-      <td>130</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>QC</th>
-      <td>BEAUCEVILLE</td>
-      <td>7027283</td>
-      <td>1913</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>8</td>
-      <td>46.15</td>
-      <td>-70.70</td>
-      <td>168</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>QC</th>
-      <td>CAUSAPSCAL</td>
-      <td>7051200</td>
-      <td>1913</td>
-      <td>11</td>
-      <td>2017</td>
-      <td>8</td>
-      <td>48.37</td>
-      <td>-67.23</td>
-      <td>168</td>
-      <td>N</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| QC     | AMOS             | 709CEE9 |         1913 |           6 |         2017 |           8 |       48.57 |       -78.13 |        305 | Y              |
+| QC     | BAGOTVILLE       | 7060400 |         1880 |          11 |         2017 |          12 |       48.33 |       -71    |        159 | Y              |
+| QC     | BAIE COMEAU      | 704S001 |         1965 |           1 |         2017 |          12 |       49.13 |       -68.2  |        130 | Y              |
+| QC     | BEAUCEVILLE      | 7027283 |         1913 |           8 |         2017 |           8 |       46.15 |       -70.7  |        168 | Y              |
+| QC     | CAUSAPSCAL       | 7051200 |         1913 |          11 |         2017 |           8 |       48.37 |       -67.23 |        168 | N              |
 
 
 
@@ -2038,124 +618,13 @@ We will use here our previous Dataframe.
 ```python
 dataframe_Prov_index.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              |
+| BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |
+| BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              |
+| BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |
+| BC     | BELLA COOLA      | 1060841 |         1895 |           5 |         2017 |          11 |       52.37 |      -126.68 |         18 | Y              |
 
 #### a- Create a new variable
 
@@ -2195,129 +664,14 @@ dataframe_Prov_index["total année"] = delta_year
 ```python
 dataframe_Prov_index.head()
 ```
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |   total année |
+|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|--------------:|
+| BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              |           125 |
+| BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |           113 |
+| BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              |           128 |
+| BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |            68 |
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>total année</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-      <td>125</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-      <td>113</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-      <td>128</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-      <td>68</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-      <td>Y</td>
-      <td>123</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 
 
@@ -2330,122 +684,21 @@ Columns from a Dataframe can be deleted or popped; let us take an example to und
 dataframe = pd.read_excel("./DATA/Homog_Temperature_Stations.xls", skiprows = range(0, 3))
 ```
 
-
 ```python
 # using del function
 print ("Deleting 'stns jointes' column using DEL function:")
 del dataframe['stns jointes']
 dataframe.head()
 ```
-
     Deleting 'stns jointes' column using DEL function:
     
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>BC</td>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>BC</td>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>BC</td>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>BC</td>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>BC</td>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+|     | Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) |
+|----:|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|
+|   0 | BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 |
+|   1 | BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 |
+|   2 | BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 |
+|   3 | BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 |
+|   4 | BC     | BELLA COOLA      | 1060841 |         1895 |           5 |         2017 |          11 |       52.37 |      -126.68 |         18 |
 
 ```python
 # using pop function
@@ -2457,111 +710,13 @@ dataframe.head()
 
     Deleting 'stnid' column using POP function:
     
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>BC</td>
-      <td>AGASSIZ</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>BC</td>
-      <td>ATLIN</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>BC</td>
-      <td>BARKERVILLE</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>BC</td>
-      <td>BEAVERDELL</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>BC</td>
-      <td>BELLA COOLA</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+|     | Prov   | Nom de station   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|----:|:-------|:-----------------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+|   0 | BC     | AGASSIZ          |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              |
+|   1 | BC     | ATLIN            |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |
+|   2 | BC     | BARKERVILLE      |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              |
+|   3 | BC     | BEAVERDELL       |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |
+|   4 | BC     | BELLA COOLA      |         1895 |           5 |         2017 |          11 |       52.37 |      -126.68 |         18 | Y              |
 
 
 ```python
@@ -2569,110 +724,13 @@ dataframe.head()
 dataframe = pd.read_excel("./DATA/Homog_Temperature_Stations.xls", skiprows = range(0, 3))
 dataframe.drop(["stns jointes"], axis=1).head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>BC</td>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>BC</td>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>BC</td>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>BC</td>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>BC</td>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+|     | Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) |
+|----:|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|
+|   0 | BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 |
+|   1 | BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 |
+|   2 | BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 |
+|   3 | BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 |
+|   4 | BC     | BELLA COOLA      | 1060841 |         1895 |           5 |         2017 |          11 |       52.37 |      -126.68 |         18 |
 
 
    ### 7.2.3.2  Row Selection/Addition/Deletion-
@@ -2689,371 +747,25 @@ Rows can be selected by passing row label to a loc function.
 dataframe = pd.read_excel("./DATA/Homog_Temperature_Stations.xls", skiprows = range(0, 3)).set_index("Prov")
 dataframe.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              |
+| BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |
+| BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              |
+| BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |
+| BC     | BELLA COOLA      | 1060841 |         1895 |           5 |         2017 |          11 |       52.37 |      -126.68 |         18 | Y              |
 
 
 ```python
 dataframe.loc['BC'].head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-Rows can be selected by passing a boolean.
-
-
-```python
-dataframe.loc['BC'].head()
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+| Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              |
+| BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |
+| BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              |
+| BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |
+| BC     | BELLA COOLA      | 1060841 |         1895 |           5 |         2017 |          11 |       52.37 |      -126.68 |         18 | Y              |
 
 
 Rows can be selected by passing integer location to an iloc function.
@@ -3062,9 +774,6 @@ Rows can be selected by passing integer location to an iloc function.
 ```python
 dataframe.iloc[0]
 ```
-
-
-
 
     Nom de station    AGASSIZ
     stnid             1100120
@@ -3086,84 +795,10 @@ Multiple rows can be selected using ‘ : ’ operator.
 ```python
 dataframe[2:4]
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+| Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              |
+| BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |
 
 
 #### b-  Row Addition
@@ -3180,176 +815,23 @@ dataframe = pd.read_excel("./DATA/Homog_Temperature_Stations.xls", skiprows = ra
 df_new = pd.DataFrame({'Nom de station': ['station1', 'station2'], 'stnid': [8888, 9999], 'Prov': ['BC', 'QC']}).set_index("Prov")
 df_new
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>station1</td>
-      <td>8888</td>
-    </tr>
-    <tr>
-      <th>QC</th>
-      <td>station2</td>
-      <td>9999</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+| Prov   | Nom de station   |   stnid |
+|:-------|:-----------------|--------:|
+| BC     | station1         |    8888 |
+| QC     | station2         |    9999 |
 
 
 ```python
 dataframe = dataframe.append(df_new)
 dataframe.tail()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>année déb.</th>
-      <th>année fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>mois déb.</th>
-      <th>mois fin.</th>
-      <th>stnid</th>
-      <th>stns jointes</th>
-      <th>élév (m)</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>NL</th>
-      <td>ST JOHN'S</td>
-      <td>1874.0</td>
-      <td>2017.0</td>
-      <td>47.62</td>
-      <td>-52.75</td>
-      <td>1.0</td>
-      <td>12.0</td>
-      <td>8403505</td>
-      <td>Y</td>
-      <td>141.0</td>
-    </tr>
-    <tr>
-      <th>NL</th>
-      <td>STEPHENVILLE</td>
-      <td>1895.0</td>
-      <td>2017.0</td>
-      <td>48.53</td>
-      <td>-58.55</td>
-      <td>6.0</td>
-      <td>12.0</td>
-      <td>8403801</td>
-      <td>Y</td>
-      <td>26.0</td>
-    </tr>
-    <tr>
-      <th>NL</th>
-      <td>WABUSH LAKE</td>
-      <td>1960.0</td>
-      <td>2017.0</td>
-      <td>52.93</td>
-      <td>-66.87</td>
-      <td>11.0</td>
-      <td>12.0</td>
-      <td>8504177</td>
-      <td>Y</td>
-      <td>551.0</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>station1</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>8888</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>QC</th>
-      <td>station2</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>9999</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+| Prov   | Nom de station   |   année déb. |   année fin. |   lat (deg) |   long (deg) |   mois déb. |   mois fin. |   stnid | stns jointes   |   élév (m) |
+|:-------|:-----------------|-------------:|-------------:|------------:|-------------:|------------:|------------:|--------:|:---------------|-----------:|
+| NL     | ST JOHN'S        |         1874 |         2017 |       47.62 |       -52.75 |           1 |          12 | 8403505 | Y              |        141 |
+| NL     | STEPHENVILLE     |         1895 |         2017 |       48.53 |       -58.55 |           6 |          12 | 8403801 | Y              |         26 |
+| NL     | WABUSH LAKE      |         1960 |         2017 |       52.93 |       -66.87 |          11 |          12 | 8504177 | Y              |        551 |
+| BC     | station1         |          nan |          nan |      nan    |       nan    |         nan |         nan |    8888 | nan            |        nan |
+| QC     | station2         |          nan |          nan |      nan    |       nan    |         nan |         nan |    9999 | nan            |        nan |
 
 
 #### c-  Row Deletion
@@ -3362,124 +844,13 @@ dataframe = pd.read_excel("./DATA/Homog_Temperature_Stations.xls", skiprows = ra
 dataframe.head()
 
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BC</th>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>BELLA COOLA</td>
-      <td>1060841</td>
-      <td>1895</td>
-      <td>5</td>
-      <td>2017</td>
-      <td>11</td>
-      <td>52.37</td>
-      <td>-126.68</td>
-      <td>18</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+| Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              |
+| BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |
+| BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              |
+| BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |
+| BC     | BELLA COOLA      | 1060841 |         1895 |           5 |         2017 |          11 |       52.37 |      -126.68 |         18 | Y              |
 
 
 ```python
@@ -3487,254 +858,29 @@ dataframe.head()
 dataframe = dataframe.drop('BC')
 dataframe.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>YT</th>
-      <td>BURWASH</td>
-      <td>2100181</td>
-      <td>1966</td>
-      <td>10</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>61.37</td>
-      <td>-139.05</td>
-      <td>807</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>YT</th>
-      <td>DAWSON</td>
-      <td>2100LRP</td>
-      <td>1901</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>64.05</td>
-      <td>-139.13</td>
-      <td>370</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>N   YT</th>
-      <td>HAINES JUNCTIO</td>
-      <td>2100630</td>
-      <td>1944</td>
-      <td>10</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>60.75</td>
-      <td>-137.50</td>
-      <td>596</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>YT</th>
-      <td>KOMAKUK BEACH</td>
-      <td>2100682</td>
-      <td>1958</td>
-      <td>7</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>69.62</td>
-      <td>-140.20</td>
-      <td>13</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>YT</th>
-      <td>MAYO</td>
-      <td>2100701</td>
-      <td>1924</td>
-      <td>10</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>63.62</td>
-      <td>-135.87</td>
-      <td>504</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| YT     | BURWASH          | 2100181 |         1966 |          10 |         2017 |          12 |       61.37 |      -139.05 |        807 | Y              |
+| YT     | DAWSON           | 2100LRP |         1901 |           1 |         2017 |          12 |       64.05 |      -139.13 |        370 | Y              |
+| N   YT | HAINES JUNCTIO   | 2100630 |         1944 |          10 |         2017 |          12 |       60.75 |      -137.5  |        596 | N              |
+| YT     | KOMAKUK BEACH    | 2100682 |         1958 |           7 |         2017 |          12 |       69.62 |      -140.2  |         13 | Y              |
+| YT     | MAYO             | 2100701 |         1924 |          10 |         2017 |          12 |       63.62 |      -135.87 |        504 | Y              |
 
 ```python
 dataframe = pd.read_excel("./DATA/Homog_Temperature_Stations.xls", skiprows = range(0, 3)).set_index("Prov")
 dataframe.loc['ON'].head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>ON</th>
-      <td>ATIKOKAN</td>
-      <td>6020LPQ</td>
-      <td>1917</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>48.80</td>
-      <td>-91.58</td>
-      <td>442</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>ON</th>
-      <td>BEATRICE</td>
-      <td>6110607</td>
-      <td>1878</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>45.13</td>
-      <td>-79.40</td>
-      <td>297</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>ON</th>
-      <td>BELLEVILLE</td>
-      <td>6150689</td>
-      <td>1921</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>44.15</td>
-      <td>-77.40</td>
-      <td>76</td>
-      <td>N</td>
-    </tr>
-    <tr>
-      <th>ON</th>
-      <td>BIG TROUT LAKE</td>
-      <td>6010735</td>
-      <td>1939</td>
-      <td>2</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>53.83</td>
-      <td>-89.87</td>
-      <td>224</td>
-      <td>Y</td>
-    </tr>
-    <tr>
-      <th>ON</th>
-      <td>BROCKVILLE</td>
-      <td>6100971</td>
-      <td>1915</td>
-      <td>7</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>44.60</td>
-      <td>-75.67</td>
-      <td>96</td>
-      <td>Y</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+| Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |
+|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|
+| ON     | ATIKOKAN         | 6020LPQ |         1917 |           1 |         2017 |          12 |       48.8  |       -91.58 |        442 | Y              |
+| ON     | BEATRICE         | 6110607 |         1878 |           1 |         2017 |          12 |       45.13 |       -79.4  |        297 | Y              |
+| ON     | BELLEVILLE       | 6150689 |         1921 |           1 |         2017 |          12 |       44.15 |       -77.4  |         76 | N              |
+| ON     | BIG TROUT LAKE   | 6010735 |         1939 |           2 |         2017 |          12 |       53.83 |       -89.87 |        224 | Y              |
+| ON     | BROCKVILLE       | 6100971 |         1915 |           7 |         2017 |          12 |       44.6  |       -75.67 |         96 | Y              |
 
 ```python
 
 ```
-
 ###  7.2.3.3 Merging/Joining Dataframe-
 
 Pandas has full-featured, high performance in-memory join operations idiomatically very similar to relational databases like SQL.
@@ -3771,61 +917,12 @@ right_dataframe = pd.DataFrame(
 left_dataframe
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>Nom de station</th>
-      <th>variable</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>MONTREAL TAVISH</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>QUEBEC</td>
-      <td>var2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>TADOUSSAC</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>OKA</td>
-      <td>var5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+|    |   id | Nom de station   | variable   |
+|---:|-----:|:-----------------|:-----------|
+|  0 |    1 | MONTREAL TAVISH  | var1       |
+|  1 |    2 | QUEBEC           | var2       |
+|  2 |    3 | TADOUSSAC        | var6       |
+|  3 |    4 | OKA              | var5       |
 
 
 
@@ -3833,60 +930,13 @@ left_dataframe
 right_dataframe
 ```
 
+|    |   id | Nom de station   | variable   |
+|---:|-----:|:-----------------|:-----------|
+|  0 |    1 | TORONTO          | var3       |
+|  1 |    2 | OTTAWA           | var1       |
+|  2 |    3 | KINGSTON         | var6       |
+|  3 |    4 | CHAPLEAU         | var5       |
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>Nom de station</th>
-      <th>variable</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>TORONTO</td>
-      <td>var3</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>OTTAWA</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>KINGSTON</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>CHAPLEAU</td>
-      <td>var5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 
 
@@ -3897,70 +947,14 @@ right_dataframe
 pd.merge(left_dataframe,right_dataframe,on='id')
 ```
 
+|    |   id | Nom de station_x   | variable_x   | Nom de station_y   | variable_y   |
+|---:|-----:|:-------------------|:-------------|:-------------------|:-------------|
+|  0 |    1 | MONTREAL TAVISH    | var1         | TORONTO            | var3         |
+|  1 |    2 | QUEBEC             | var2         | OTTAWA             | var1         |
+|  2 |    3 | TADOUSSAC          | var6         | KINGSTON           | var6         |
+|  3 |    4 | OKA                | var5         | CHAPLEAU           | var5         |
 
 
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>Nom de station_x</th>
-      <th>variable_x</th>
-      <th>Nom de station_y</th>
-      <th>variable_y</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>MONTREAL TAVISH</td>
-      <td>var1</td>
-      <td>TORONTO</td>
-      <td>var3</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>QUEBEC</td>
-      <td>var2</td>
-      <td>OTTAWA</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>TADOUSSAC</td>
-      <td>var6</td>
-      <td>KINGSTON</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>OKA</td>
-      <td>var5</td>
-      <td>CHAPLEAU</td>
-      <td>var5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 
 
@@ -3970,52 +964,13 @@ pd.merge(left_dataframe,right_dataframe,on='id')
 ```python
 pd.merge(left_dataframe,right_dataframe,on=['id','variable'])
 ```
+|    |   id | Nom de station_x   | variable   | Nom de station_y   |
+|---:|-----:|:-------------------|:-----------|:-------------------|
+|  0 |    3 | TADOUSSAC          | var6       | KINGSTON           |
+|  1 |    4 | OKA                | var5       | CHAPLEAU           |
 
 
 
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>Nom de station_x</th>
-      <th>variable</th>
-      <th>Nom de station_y</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3</td>
-      <td>TADOUSSAC</td>
-      <td>var6</td>
-      <td>KINGSTON</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>4</td>
-      <td>OKA</td>
-      <td>var5</td>
-      <td>CHAPLEAU</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 
 
@@ -4029,71 +984,46 @@ The how argument to merge specifies how to determine which keys are to be includ
 # Left Join
 pd.merge(left_dataframe, right_dataframe, on='variable', how='left')
 ```
+|    |   id_x | Nom de station_x   | variable   |   id_y | Nom de station_y   |
+|---:|-------:|:-------------------|:-----------|-------:|:-------------------|
+|  0 |      1 | MONTREAL TAVISH    | var1       |      2 | OTTAWA             |
+|  1 |      2 | QUEBEC             | var2       |    nan | nan                |
+|  2 |      3 | TADOUSSAC          | var6       |      3 | KINGSTON           |
+|  3 |      4 | OKA                | var5       |      4 | CHAPLEAU           |
+
+```python
+# right Join
+pd.merge(left_dataframe, right_dataframe, on='variable', how='right')
+```
+|    |   id_x | Nom de station_x   | variable   |   id_y | Nom de station_y   |
+|---:|-------:|:-------------------|:-----------|-------:|:-------------------|
+|  0 |      1 | MONTREAL TAVISH    | var1       |      2 | OTTAWA             |
+|  1 |      3 | TADOUSSAC          | var6       |      3 | KINGSTON           |
+|  2 |      4 | OKA                | var5       |      4 | CHAPLEAU           |
+|  3 |    nan | nan                | var3       |      1 | TORONTO            |
+
+```python
+# outer Join
+pd.merge(left_dataframe, right_dataframe, on='variable', how='outer')
+```
+|    |   id_x | Nom de station_x   | variable   |   id_y | Nom de station_y   |
+|---:|-------:|:-------------------|:-----------|-------:|:-------------------|
+|  0 |      1 | MONTREAL TAVISH    | var1       |      2 | OTTAWA             |
+|  1 |      2 | QUEBEC             | var2       |    nan | nan                |
+|  2 |      3 | TADOUSSAC          | var6       |      3 | KINGSTON           |
+|  3 |      4 | OKA                | var5       |      4 | CHAPLEAU           |
+|  4 |    nan | nan                | var3       |      1 | TORONTO            |
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id_x</th>
-      <th>Nom de station_x</th>
-      <th>variable</th>
-      <th>id_y</th>
-      <th>Nom de station_y</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>MONTREAL TAVISH</td>
-      <td>var1</td>
-      <td>2.0</td>
-      <td>OTTAWA</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>QUEBEC</td>
-      <td>var2</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>TADOUSSAC</td>
-      <td>var6</td>
-      <td>3.0</td>
-      <td>KINGSTON</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>OKA</td>
-      <td>var5</td>
-      <td>4.0</td>
-      <td>CHAPLEAU</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+```python
+# inner Join
+pd.merge(left_dataframe, right_dataframe, on='variable', how='inner')
+```
+|    |   id_x | Nom de station_x   | variable   |   id_y | Nom de station_y   |
+|---:|-------:|:-------------------|:-----------|-------:|:-------------------|
+|  0 |      1 | MONTREAL TAVISH    | var1       |      2 | OTTAWA             |
+|  1 |      3 | TADOUSSAC          | var6       |      3 | KINGSTON           |
+|  2 |      4 | OKA                | var5       |      4 | CHAPLEAU           |
 
 ### 7.2.3.4  Dataframe Concatenation-
 
@@ -4122,85 +1052,17 @@ dataframe2 = pd.DataFrame(
 
 pd.concat([dataframe1,dataframe2])
 ```
+|    |   id | Nom de station   | variable   |
+|---:|-----:|:-----------------|:-----------|
+|  0 |    1 | MONTREAL TAVISH  | var1       |
+|  1 |    2 | QUEBEC           | var2       |
+|  2 |    3 | TADOUSSAC        | var6       |
+|  3 |    4 | OKA              | var5       |
+|  0 |    1 | TORONTO          | var3       |
+|  1 |    2 | OTTAWA           | var1       |
+|  2 |    3 | KINGSTON         | var6       |
+|  3 |    4 | CHAPLEAU         | var5       |
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>Nom de station</th>
-      <th>variable</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>MONTREAL TAVISH</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>QUEBEC</td>
-      <td>var2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>TADOUSSAC</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>OKA</td>
-      <td>var5</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>TORONTO</td>
-      <td>var3</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>OTTAWA</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>KINGSTON</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>CHAPLEAU</td>
-      <td>var5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 
 
@@ -4210,88 +1072,17 @@ Suppose we wanted to associate specific keys with each of the pieces of the chop
 ```python
 pd.concat([dataframe1,dataframe2],keys=['QC','ON'])
 ```
+|           |   id | Nom de station   | variable   |
+|:----------|-----:|:-----------------|:-----------|
+| ('QC', 0) |    1 | MONTREAL TAVISH  | var1       |
+| ('QC', 1) |    2 | QUEBEC           | var2       |
+| ('QC', 2) |    3 | TADOUSSAC        | var6       |
+| ('QC', 3) |    4 | OKA              | var5       |
+| ('ON', 0) |    1 | TORONTO          | var3       |
+| ('ON', 1) |    2 | OTTAWA           | var1       |
+| ('ON', 2) |    3 | KINGSTON         | var6       |
+| ('ON', 3) |    4 | CHAPLEAU         | var5       |
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th>id</th>
-      <th>Nom de station</th>
-      <th>variable</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="4" valign="top">QC</th>
-      <th>0</th>
-      <td>1</td>
-      <td>MONTREAL TAVISH</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>QUEBEC</td>
-      <td>var2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>TADOUSSAC</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>OKA</td>
-      <td>var5</td>
-    </tr>
-    <tr>
-      <th rowspan="4" valign="top">ON</th>
-      <th>0</th>
-      <td>1</td>
-      <td>TORONTO</td>
-      <td>var3</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>OTTAWA</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>KINGSTON</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>CHAPLEAU</td>
-      <td>var5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 
 
@@ -4301,86 +1092,16 @@ If we don't want the index being duplicated, set ignore_index to True.
 ```python
 pd.concat([dataframe1,dataframe2],keys=['QC','ON'],ignore_index=True)
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>Nom de station</th>
-      <th>variable</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>MONTREAL TAVISH</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>QUEBEC</td>
-      <td>var2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>TADOUSSAC</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>OKA</td>
-      <td>var5</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1</td>
-      <td>TORONTO</td>
-      <td>var3</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>2</td>
-      <td>OTTAWA</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>3</td>
-      <td>KINGSTON</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>4</td>
-      <td>CHAPLEAU</td>
-      <td>var5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+|    |   id | Nom de station   | variable   |
+|---:|-----:|:-----------------|:-----------|
+|  0 |    1 | MONTREAL TAVISH  | var1       |
+|  1 |    2 | QUEBEC           | var2       |
+|  2 |    3 | TADOUSSAC        | var6       |
+|  3 |    4 | OKA              | var5       |
+|  4 |    1 | TORONTO          | var3       |
+|  5 |    2 | OTTAWA           | var1       |
+|  6 |    3 | KINGSTON         | var6       |
+|  7 |    4 | CHAPLEAU         | var5       |
 
 
 If the two Dataframes need to be added along axis=1, then the new columns will be appended.
@@ -4389,76 +1110,12 @@ If the two Dataframes need to be added along axis=1, then the new columns will b
 ```python
 pd.concat([dataframe1,dataframe2],axis=1)
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>Nom de station</th>
-      <th>variable</th>
-      <th>id</th>
-      <th>Nom de station</th>
-      <th>variable</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>MONTREAL TAVISH</td>
-      <td>var1</td>
-      <td>1</td>
-      <td>TORONTO</td>
-      <td>var3</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>QUEBEC</td>
-      <td>var2</td>
-      <td>2</td>
-      <td>OTTAWA</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>TADOUSSAC</td>
-      <td>var6</td>
-      <td>3</td>
-      <td>KINGSTON</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>OKA</td>
-      <td>var5</td>
-      <td>4</td>
-      <td>CHAPLEAU</td>
-      <td>var5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+|    |   id | Nom de station   | variable   |   id | Nom de station   | variable   |
+|---:|-----:|:-----------------|:-----------|-----:|:-----------------|:-----------|
+|  0 |    1 | MONTREAL TAVISH  | var1       |    1 | TORONTO          | var3       |
+|  1 |    2 | QUEBEC           | var2       |    2 | OTTAWA           | var1       |
+|  2 |    3 | TADOUSSAC        | var6       |    3 | KINGSTON         | var6       |
+|  3 |    4 | OKA              | var5       |    4 | CHAPLEAU         | var5       |
 
 
 
@@ -4470,86 +1127,16 @@ A useful shortcut to concat are the append instance methods on DataFrame. They c
 ```python
 dataframe1.append(dataframe2)
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>Nom de station</th>
-      <th>variable</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>MONTREAL TAVISH</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>QUEBEC</td>
-      <td>var2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>TADOUSSAC</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>OKA</td>
-      <td>var5</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>TORONTO</td>
-      <td>var3</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>OTTAWA</td>
-      <td>var1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>KINGSTON</td>
-      <td>var6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>CHAPLEAU</td>
-      <td>var5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+|    |   id | Nom de station   | variable   |
+|---:|-----:|:-----------------|:-----------|
+|  0 |    1 | MONTREAL TAVISH  | var1       |
+|  1 |    2 | QUEBEC           | var2       |
+|  2 |    3 | TADOUSSAC        | var6       |
+|  3 |    4 | OKA              | var5       |
+|  0 |    1 | TORONTO          | var3       |
+|  1 |    2 | OTTAWA           | var1       |
+|  2 |    3 | KINGSTON         | var6       |
+|  3 |    4 | CHAPLEAU         | var5       |
 
 
 ### 7.2.4  Basic Functionality on DataFrame
@@ -4566,153 +1153,13 @@ We will present some useful functions with exploring a dataset.
 dataframe = pd.read_csv("./DATA/Climato_Stations_ECCC_1981_2010_YEAR.csv", encoding='latin-1')
 dataframe.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>DG0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>BC</td>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>BC</td>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-      <td>5.630427</td>
-      <td>18.903333</td>
-      <td>-3.460520</td>
-      <td>-19.235000</td>
-      <td>860.083333</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>BC</td>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>BC</td>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-      <td>12.628017</td>
-      <td>23.641667</td>
-      <td>4.017479</td>
-      <td>-3.646000</td>
-      <td>1798.093333</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>BC</td>
-      <td>BLIND CHANNEL</td>
-      <td>1021480</td>
-      <td>1958</td>
-      <td>7</td>
-      <td>2016</td>
-      <td>2</td>
-      <td>50.42</td>
-      <td>-125.50</td>
-      <td>23</td>
-      <td>N</td>
-      <td>12.155616</td>
-      <td>20.200667</td>
-      <td>6.776893</td>
-      <td>1.094667</td>
-      <td>2518.680000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+|    |   Unnamed: 0 | Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |      Tmax |   Tmax90p |      Tmin |   Tmin10p |      DG0 |
+|---:|-------------:|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|----------:|----------:|----------:|----------:|---------:|
+|  0 |            0 | BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              | nan       |  nan      | nan       | nan       |  nan     |
+|  1 |            1 | BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |   5.63043 |   18.9033 |  -3.46052 | -19.235   |  860.083 |
+|  2 |            2 | BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              | nan       |  nan      | nan       | nan       |  nan     |
+|  3 |            3 | BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |  12.628   |   23.6417 |   4.01748 |  -3.646   | 1798.09  |
+|  4 |            4 | BC     | BLIND CHANNEL    | 1021480 |         1958 |           7 |         2016 |           2 |       50.42 |      -125.5  |         23 | N              |  12.1556  |   20.2007 |   6.77689 |   1.09467 | 2518.68  |
 
 - <b>.shape</b> method: 
 
@@ -4846,460 +1293,39 @@ sort_values() is the method for sorting by values. It accepts a 'by' argument wh
 dataframe.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>DG0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>BC</td>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>BC</td>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-      <td>5.630427</td>
-      <td>18.903333</td>
-      <td>-3.460520</td>
-      <td>-19.235000</td>
-      <td>860.083333</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>BC</td>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>BC</td>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-      <td>12.628017</td>
-      <td>23.641667</td>
-      <td>4.017479</td>
-      <td>-3.646000</td>
-      <td>1798.093333</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>BC</td>
-      <td>BLIND CHANNEL</td>
-      <td>1021480</td>
-      <td>1958</td>
-      <td>7</td>
-      <td>2016</td>
-      <td>2</td>
-      <td>50.42</td>
-      <td>-125.50</td>
-      <td>23</td>
-      <td>N</td>
-      <td>12.155616</td>
-      <td>20.200667</td>
-      <td>6.776893</td>
-      <td>1.094667</td>
-      <td>2518.680000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+|    |   Unnamed: 0 | Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |      Tmax |   Tmax90p |      Tmin |   Tmin10p |      DG0 |
+|---:|-------------:|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|----------:|----------:|----------:|----------:|---------:|
+|  0 |            0 | BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              | nan       |  nan      | nan       | nan       |  nan     |
+|  1 |            1 | BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |   5.63043 |   18.9033 |  -3.46052 | -19.235   |  860.083 |
+|  2 |            2 | BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              | nan       |  nan      | nan       | nan       |  nan     |
+|  3 |            3 | BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |  12.628   |   23.6417 |   4.01748 |  -3.646   | 1798.09  |
+|  4 |            4 | BC     | BLIND CHANNEL    | 1021480 |         1958 |           7 |         2016 |           2 |       50.42 |      -125.5  |         23 | N              |  12.1556  |   20.2007 |   6.77689 |   1.09467 | 2518.68  |
 
 ```python
 df_label_sorted = dataframe.sort_values(by="Prov")
 df_label_sorted.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>DG0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>127</th>
-      <td>127</td>
-      <td>AB</td>
-      <td>SLAVE LAKE</td>
-      <td>3065995</td>
-      <td>1922</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>55.30</td>
-      <td>-114.78</td>
-      <td>583</td>
-      <td>Y</td>
-      <td>7.481366</td>
-      <td>22.464333</td>
-      <td>-3.422267</td>
-      <td>-20.380333</td>
-      <td>1131.030000</td>
-    </tr>
-    <tr>
-      <th>106</th>
-      <td>106</td>
-      <td>AB</td>
-      <td>EDMONTON</td>
-      <td>3012216</td>
-      <td>1880</td>
-      <td>7</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>53.57</td>
-      <td>-113.52</td>
-      <td>723</td>
-      <td>Y</td>
-      <td>8.982117</td>
-      <td>24.328000</td>
-      <td>-3.117089</td>
-      <td>-19.190667</td>
-      <td>1095.933333</td>
-    </tr>
-    <tr>
-      <th>104</th>
-      <td>104</td>
-      <td>AB</td>
-      <td>COLD LAKE</td>
-      <td>3081680</td>
-      <td>1925</td>
-      <td>7</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>54.42</td>
-      <td>-110.28</td>
-      <td>541</td>
-      <td>Y</td>
-      <td>7.724485</td>
-      <td>24.273667</td>
-      <td>-3.037595</td>
-      <td>-21.203667</td>
-      <td>1303.950000</td>
-    </tr>
-    <tr>
-      <th>103</th>
-      <td>103</td>
-      <td>AB</td>
-      <td>CARWAY</td>
-      <td>3031402</td>
-      <td>1914</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.00</td>
-      <td>-113.37</td>
-      <td>1354</td>
-      <td>Y</td>
-      <td>11.139694</td>
-      <td>24.925000</td>
-      <td>-1.618858</td>
-      <td>-13.980000</td>
-      <td>956.836667</td>
-    </tr>
-    <tr>
-      <th>102</th>
-      <td>102</td>
-      <td>AB</td>
-      <td>CAMROSE</td>
-      <td>3011240</td>
-      <td>1946</td>
-      <td>3</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>53.03</td>
-      <td>-112.82</td>
-      <td>739</td>
-      <td>N</td>
-      <td>8.964966</td>
-      <td>24.175667</td>
-      <td>-3.714421</td>
-      <td>-20.588000</td>
-      <td>1048.130000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+|     |   Unnamed: 0 | Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |     Tmax |   Tmax90p |     Tmin |   Tmin10p |      DG0 |
+|----:|-------------:|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|---------:|----------:|---------:|----------:|---------:|
+| 127 |          127 | AB     | SLAVE LAKE       | 3065995 |         1922 |           8 |         2017 |          12 |       55.3  |      -114.78 |        583 | Y              |  7.48137 |   22.4643 | -3.42227 |  -20.3803 | 1131.03  |
+| 106 |          106 | AB     | EDMONTON         | 3012216 |         1880 |           7 |         2017 |          12 |       53.57 |      -113.52 |        723 | Y              |  8.98212 |   24.328  | -3.11709 |  -19.1907 | 1095.93  |
+| 104 |          104 | AB     | COLD LAKE        | 3081680 |         1925 |           7 |         2017 |          12 |       54.42 |      -110.28 |        541 | Y              |  7.72448 |   24.2737 | -3.03759 |  -21.2037 | 1303.95  |
+| 103 |          103 | AB     | CARWAY           | 3031402 |         1914 |           8 |         2017 |          12 |       49    |      -113.37 |       1354 | Y              | 11.1397  |   24.925  | -1.61886 |  -13.98   |  956.837 |
+| 102 |          102 | AB     | CAMROSE          | 3011240 |         1946 |           3 |         2017 |          12 |       53.03 |      -112.82 |        739 | N              |  8.96497 |   24.1757 | -3.71442 |  -20.588  | 1048.13  |
 
 The argument could takes a list of column values.
-
 
 ```python
 df_label_sorted = dataframe.sort_values(by=['Prov','année déb.'])
 df_label_sorted.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>DG0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>106</th>
-      <td>106</td>
-      <td>AB</td>
-      <td>EDMONTON</td>
-      <td>3012216</td>
-      <td>1880</td>
-      <td>7</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>53.57</td>
-      <td>-113.52</td>
-      <td>723</td>
-      <td>Y</td>
-      <td>8.982117</td>
-      <td>24.328000</td>
-      <td>-3.117089</td>
-      <td>-19.190667</td>
-      <td>1095.933333</td>
-    </tr>
-    <tr>
-      <th>110</th>
-      <td>110</td>
-      <td>AB</td>
-      <td>FORT CHIPEWYAN</td>
-      <td>3072655</td>
-      <td>1883</td>
-      <td>10</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>58.77</td>
-      <td>-111.12</td>
-      <td>238</td>
-      <td>Y</td>
-      <td>4.282190</td>
-      <td>23.566000</td>
-      <td>-6.544206</td>
-      <td>-28.629667</td>
-      <td>1135.113333</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>121</td>
-      <td>AB</td>
-      <td>MEDICINE HAT</td>
-      <td>3034485</td>
-      <td>1883</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>50.02</td>
-      <td>-110.72</td>
-      <td>717</td>
-      <td>Y</td>
-      <td>12.648926</td>
-      <td>28.497333</td>
-      <td>-0.155900</td>
-      <td>-15.783333</td>
-      <td>1563.866667</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>99</td>
-      <td>AB</td>
-      <td>CALGARY</td>
-      <td>3031092</td>
-      <td>1885</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>51.12</td>
-      <td>-114.02</td>
-      <td>1084</td>
-      <td>Y</td>
-      <td>10.834976</td>
-      <td>24.467333</td>
-      <td>-1.444606</td>
-      <td>-15.235000</td>
-      <td>1172.050000</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>97</td>
-      <td>AB</td>
-      <td>BANFF</td>
-      <td>3050519</td>
-      <td>1887</td>
-      <td>11</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>51.20</td>
-      <td>-115.55</td>
-      <td>1397</td>
-      <td>Y</td>
-      <td>8.906518</td>
-      <td>23.132000</td>
-      <td>-3.084884</td>
-      <td>-15.858333</td>
-      <td>750.370000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+|     |   Unnamed: 0 | Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |     Tmax |   Tmax90p |     Tmin |   Tmin10p |     DG0 |
+|----:|-------------:|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|---------:|----------:|---------:|----------:|--------:|
+| 106 |          106 | AB     | EDMONTON         | 3012216 |         1880 |           7 |         2017 |          12 |       53.57 |      -113.52 |        723 | Y              |  8.98212 |   24.328  | -3.11709 |  -19.1907 | 1095.93 |
+| 110 |          110 | AB     | FORT CHIPEWYAN   | 3072655 |         1883 |          10 |         2017 |          12 |       58.77 |      -111.12 |        238 | Y              |  4.28219 |   23.566  | -6.54421 |  -28.6297 | 1135.11 |
+| 121 |          121 | AB     | MEDICINE HAT     | 3034485 |         1883 |           8 |         2017 |          12 |       50.02 |      -110.72 |        717 | Y              | 12.6489  |   28.4973 | -0.1559  |  -15.7833 | 1563.87 |
+|  99 |           99 | AB     | CALGARY          | 3031092 |         1885 |           1 |         2017 |          12 |       51.12 |      -114.02 |       1084 | Y              | 10.835   |   24.4673 | -1.44461 |  -15.235  | 1172.05 |
+|  97 |           97 | AB     | BANFF            | 3050519 |         1887 |          11 |         2017 |          12 |       51.2  |      -115.55 |       1397 | Y              |  8.90652 |   23.132  | -3.08488 |  -15.8583 |  750.37 |
 
 - <b>sort_index()</b> method:
 
@@ -5309,457 +1335,37 @@ Using the sort_index() method, by passing the axis arguments and the order of so
 ```python
 df_label_sorted.sort_index().head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>DG0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>BC</td>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>BC</td>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-      <td>5.630427</td>
-      <td>18.903333</td>
-      <td>-3.460520</td>
-      <td>-19.235000</td>
-      <td>860.083333</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>BC</td>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>BC</td>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-      <td>12.628017</td>
-      <td>23.641667</td>
-      <td>4.017479</td>
-      <td>-3.646000</td>
-      <td>1798.093333</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>BC</td>
-      <td>BLIND CHANNEL</td>
-      <td>1021480</td>
-      <td>1958</td>
-      <td>7</td>
-      <td>2016</td>
-      <td>2</td>
-      <td>50.42</td>
-      <td>-125.50</td>
-      <td>23</td>
-      <td>N</td>
-      <td>12.155616</td>
-      <td>20.200667</td>
-      <td>6.776893</td>
-      <td>1.094667</td>
-      <td>2518.680000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+|    |   Unnamed: 0 | Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |      Tmax |   Tmax90p |      Tmin |   Tmin10p |      DG0 |
+|---:|-------------:|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|----------:|----------:|----------:|----------:|---------:|
+|  0 |            0 | BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              | nan       |  nan      | nan       | nan       |  nan     |
+|  1 |            1 | BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |   5.63043 |   18.9033 |  -3.46052 | -19.235   |  860.083 |
+|  2 |            2 | BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              | nan       |  nan      | nan       | nan       |  nan     |
+|  3 |            3 | BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |  12.628   |   23.6417 |   4.01748 |  -3.646   | 1798.09  |
+|  4 |            4 | BC     | BLIND CHANNEL    | 1021480 |         1958 |           7 |         2016 |           2 |       50.42 |      -125.5  |         23 | N              |  12.1556  |   20.2007 |   6.77689 |   1.09467 | 2518.68  |
 
 
 ```python
 df_label_sorted.sort_index(ascending=False).head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>DG0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>288</th>
-      <td>288</td>
-      <td>NL</td>
-      <td>WABUSH LAKE</td>
-      <td>8504177</td>
-      <td>1960</td>
-      <td>11</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>52.93</td>
-      <td>-66.87</td>
-      <td>551</td>
-      <td>Y</td>
-      <td>2.339743</td>
-      <td>19.693667</td>
-      <td>-8.024778</td>
-      <td>-29.453667</td>
-      <td>792.913333</td>
-    </tr>
-    <tr>
-      <th>287</th>
-      <td>287</td>
-      <td>NL</td>
-      <td>STEPHENVILLE</td>
-      <td>8403801</td>
-      <td>1895</td>
-      <td>6</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>48.53</td>
-      <td>-58.55</td>
-      <td>26</td>
-      <td>Y</td>
-      <td>8.806534</td>
-      <td>20.614000</td>
-      <td>1.812748</td>
-      <td>-10.582000</td>
-      <td>1710.170000</td>
-    </tr>
-    <tr>
-      <th>286</th>
-      <td>286</td>
-      <td>NL</td>
-      <td>ST JOHN'S</td>
-      <td>8403505</td>
-      <td>1874</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>47.62</td>
-      <td>-52.75</td>
-      <td>141</td>
-      <td>Y</td>
-      <td>9.073669</td>
-      <td>21.623667</td>
-      <td>1.549770</td>
-      <td>-8.919000</td>
-      <td>1474.820000</td>
-    </tr>
-    <tr>
-      <th>285</th>
-      <td>285</td>
-      <td>NL</td>
-      <td>ST ANTHONY</td>
-      <td>8403389</td>
-      <td>1946</td>
-      <td>6</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>51.37</td>
-      <td>-55.60</td>
-      <td>33</td>
-      <td>Y</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>284</th>
-      <td>284</td>
-      <td>NL</td>
-      <td>PORT AUXBASQUES</td>
-      <td>8402975</td>
-      <td>1909</td>
-      <td>2</td>
-      <td>2017</td>
-      <td>9</td>
-      <td>47.58</td>
-      <td>-58.97</td>
-      <td>40</td>
-      <td>N</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+|     |   Unnamed: 0 | Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |      Tmax |   Tmax90p |      Tmin |   Tmin10p |      DG0 |
+|----:|-------------:|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|----------:|----------:|----------:|----------:|---------:|
+| 288 |          288 | NL     | WABUSH LAKE      | 8504177 |         1960 |          11 |         2017 |          12 |       52.93 |       -66.87 |        551 | Y              |   2.33974 |   19.6937 |  -8.02478 |  -29.4537 |  792.913 |
+| 287 |          287 | NL     | STEPHENVILLE     | 8403801 |         1895 |           6 |         2017 |          12 |       48.53 |       -58.55 |         26 | Y              |   8.80653 |   20.614  |   1.81275 |  -10.582  | 1710.17  |
+| 286 |          286 | NL     | ST JOHN'S        | 8403505 |         1874 |           1 |         2017 |          12 |       47.62 |       -52.75 |        141 | Y              |   9.07367 |   21.6237 |   1.54977 |   -8.919  | 1474.82  |
+| 285 |          285 | NL     | ST ANTHONY       | 8403389 |         1946 |           6 |         2017 |          12 |       51.37 |       -55.6  |         33 | Y              | nan       |  nan      | nan       |  nan      |  nan     |
+| 284 |          284 | NL     | PORT AUXBASQUES  | 8402975 |         1909 |           2 |         2017 |           9 |       47.58 |       -58.97 |         40 | N              | nan       |  nan      | nan       |  nan      |  nan     |
 
 
 ```python
 df_label_sorted.sort_index(axis=1).head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>DG0</th>
-      <th>Nom de station</th>
-      <th>Prov</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>Unnamed: 0</th>
-      <th>année déb.</th>
-      <th>année fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>mois déb.</th>
-      <th>mois fin.</th>
-      <th>stnid</th>
-      <th>stns jointes</th>
-      <th>élév (m)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>106</th>
-      <td>1095.933333</td>
-      <td>EDMONTON</td>
-      <td>AB</td>
-      <td>8.982117</td>
-      <td>24.328000</td>
-      <td>-3.117089</td>
-      <td>-19.190667</td>
-      <td>106</td>
-      <td>1880</td>
-      <td>2017</td>
-      <td>53.57</td>
-      <td>-113.52</td>
-      <td>7</td>
-      <td>12</td>
-      <td>3012216</td>
-      <td>Y</td>
-      <td>723</td>
-    </tr>
-    <tr>
-      <th>110</th>
-      <td>1135.113333</td>
-      <td>FORT CHIPEWYAN</td>
-      <td>AB</td>
-      <td>4.282190</td>
-      <td>23.566000</td>
-      <td>-6.544206</td>
-      <td>-28.629667</td>
-      <td>110</td>
-      <td>1883</td>
-      <td>2017</td>
-      <td>58.77</td>
-      <td>-111.12</td>
-      <td>10</td>
-      <td>12</td>
-      <td>3072655</td>
-      <td>Y</td>
-      <td>238</td>
-    </tr>
-    <tr>
-      <th>121</th>
-      <td>1563.866667</td>
-      <td>MEDICINE HAT</td>
-      <td>AB</td>
-      <td>12.648926</td>
-      <td>28.497333</td>
-      <td>-0.155900</td>
-      <td>-15.783333</td>
-      <td>121</td>
-      <td>1883</td>
-      <td>2017</td>
-      <td>50.02</td>
-      <td>-110.72</td>
-      <td>8</td>
-      <td>12</td>
-      <td>3034485</td>
-      <td>Y</td>
-      <td>717</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>1172.050000</td>
-      <td>CALGARY</td>
-      <td>AB</td>
-      <td>10.834976</td>
-      <td>24.467333</td>
-      <td>-1.444606</td>
-      <td>-15.235000</td>
-      <td>99</td>
-      <td>1885</td>
-      <td>2017</td>
-      <td>51.12</td>
-      <td>-114.02</td>
-      <td>1</td>
-      <td>12</td>
-      <td>3031092</td>
-      <td>Y</td>
-      <td>1084</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>750.370000</td>
-      <td>BANFF</td>
-      <td>AB</td>
-      <td>8.906518</td>
-      <td>23.132000</td>
-      <td>-3.084884</td>
-      <td>-15.858333</td>
-      <td>97</td>
-      <td>1887</td>
-      <td>2017</td>
-      <td>51.20</td>
-      <td>-115.55</td>
-      <td>11</td>
-      <td>12</td>
-      <td>3050519</td>
-      <td>Y</td>
-      <td>1397</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+|     |     DG0 | Nom de station   | Prov   |     Tmax |   Tmax90p |     Tmin |   Tmin10p |   Unnamed: 0 |   année déb. |   année fin. |   lat (deg) |   long (deg) |   mois déb. |   mois fin. |   stnid | stns jointes   |   élév (m) |
+|----:|--------:|:-----------------|:-------|---------:|----------:|---------:|----------:|-------------:|-------------:|-------------:|------------:|-------------:|------------:|------------:|--------:|:---------------|-----------:|
+| 106 | 1095.93 | EDMONTON         | AB     |  8.98212 |   24.328  | -3.11709 |  -19.1907 |          106 |         1880 |         2017 |       53.57 |      -113.52 |           7 |          12 | 3012216 | Y              |        723 |
+| 110 | 1135.11 | FORT CHIPEWYAN   | AB     |  4.28219 |   23.566  | -6.54421 |  -28.6297 |          110 |         1883 |         2017 |       58.77 |      -111.12 |          10 |          12 | 3072655 | Y              |        238 |
+| 121 | 1563.87 | MEDICINE HAT     | AB     | 12.6489  |   28.4973 | -0.1559  |  -15.7833 |          121 |         1883 |         2017 |       50.02 |      -110.72 |           8 |          12 | 3034485 | Y              |        717 |
+|  99 | 1172.05 | CALGARY          | AB     | 10.835   |   24.4673 | -1.44461 |  -15.235  |           99 |         1885 |         2017 |       51.12 |      -114.02 |           1 |          12 | 3031092 | Y              |       1084 |
+|  97 |  750.37 | BANFF            | AB     |  8.90652 |   23.132  | -3.08488 |  -15.8583 |           97 |         1887 |         2017 |       51.2  |      -115.55 |          11 |          12 | 3050519 | Y              |       1397 |
 
 - <b>.describe()</b> method:  
 
@@ -5847,153 +1453,13 @@ dataframe["stns jointes"]=dataframe["stns jointes"].apply(lambda x: x.replace("Y
 dataframe = dataframe.dropna() 
 dataframe.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>DG0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>BC</td>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>NaN</td>
-      <td>5.630427</td>
-      <td>18.903333</td>
-      <td>-3.460520</td>
-      <td>-19.235000</td>
-      <td>860.083333</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>BC</td>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>1</td>
-      <td>12.628017</td>
-      <td>23.641667</td>
-      <td>4.017479</td>
-      <td>-3.646000</td>
-      <td>1798.093333</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>BC</td>
-      <td>BLIND CHANNEL</td>
-      <td>1021480</td>
-      <td>1958</td>
-      <td>7</td>
-      <td>2016</td>
-      <td>2</td>
-      <td>50.42</td>
-      <td>-125.50</td>
-      <td>23</td>
-      <td>NaN</td>
-      <td>12.155616</td>
-      <td>20.200667</td>
-      <td>6.776893</td>
-      <td>1.094667</td>
-      <td>2518.680000</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>5</td>
-      <td>BC</td>
-      <td>BLUE RIVER</td>
-      <td>1160899</td>
-      <td>1946</td>
-      <td>9</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>52.13</td>
-      <td>-119.28</td>
-      <td>683</td>
-      <td>1</td>
-      <td>10.440754</td>
-      <td>25.991667</td>
-      <td>-1.125014</td>
-      <td>-12.582333</td>
-      <td>987.363333</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>9</td>
-      <td>BC</td>
-      <td>COMOX</td>
-      <td>1021830</td>
-      <td>1935</td>
-      <td>11</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.72</td>
-      <td>-124.90</td>
-      <td>26</td>
-      <td>1</td>
-      <td>13.737613</td>
-      <td>23.102333</td>
-      <td>6.424850</td>
-      <td>-0.526000</td>
-      <td>2444.393333</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+|    |   Unnamed: 0 | Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) |   stns jointes |     Tmax |   Tmax90p |     Tmin |   Tmin10p |      DG0 |
+|---:|-------------:|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|---------------:|---------:|----------:|---------:|----------:|---------:|
+|  1 |            1 | BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 |            nan |  5.63043 |   18.9033 | -3.46052 | -19.235   |  860.083 |
+|  3 |            3 | BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 |              1 | 12.628   |   23.6417 |  4.01748 |  -3.646   | 1798.09  |
+|  4 |            4 | BC     | BLIND CHANNEL    | 1021480 |         1958 |           7 |         2016 |           2 |       50.42 |      -125.5  |         23 |            nan | 12.1556  |   20.2007 |  6.77689 |   1.09467 | 2518.68  |
+|  5 |            5 | BC     | BLUE RIVER       | 1160899 |         1946 |           9 |         2017 |          12 |       52.13 |      -119.28 |        683 |              1 | 10.4408  |   25.9917 | -1.12501 | -12.5823  |  987.363 |
+|  9 |            9 | BC     | COMOX            | 1021830 |         1935 |          11 |         2017 |          12 |       49.72 |      -124.9  |         26 |              1 | 13.7376  |   23.1023 |  6.42485 |  -0.526   | 2444.39  |
 
 
 ```python
@@ -6002,151 +1468,13 @@ dataframe["Tmax"]=dataframe["Tmax"].apply(lambda x: int(x))
 dataframe.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>DG0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>BC</td>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>NaN</td>
-      <td>5</td>
-      <td>18.903333</td>
-      <td>-3.46</td>
-      <td>-19.235000</td>
-      <td>860.083333</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>BC</td>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>1</td>
-      <td>12</td>
-      <td>23.641667</td>
-      <td>4.02</td>
-      <td>-3.646000</td>
-      <td>1798.093333</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>BC</td>
-      <td>BLIND CHANNEL</td>
-      <td>1021480</td>
-      <td>1958</td>
-      <td>7</td>
-      <td>2016</td>
-      <td>2</td>
-      <td>50.42</td>
-      <td>-125.50</td>
-      <td>23</td>
-      <td>NaN</td>
-      <td>12</td>
-      <td>20.200667</td>
-      <td>6.78</td>
-      <td>1.094667</td>
-      <td>2518.680000</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>5</td>
-      <td>BC</td>
-      <td>BLUE RIVER</td>
-      <td>1160899</td>
-      <td>1946</td>
-      <td>9</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>52.13</td>
-      <td>-119.28</td>
-      <td>683</td>
-      <td>1</td>
-      <td>10</td>
-      <td>25.991667</td>
-      <td>-1.13</td>
-      <td>-12.582333</td>
-      <td>987.363333</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>9</td>
-      <td>BC</td>
-      <td>COMOX</td>
-      <td>1021830</td>
-      <td>1935</td>
-      <td>11</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.72</td>
-      <td>-124.90</td>
-      <td>26</td>
-      <td>1</td>
-      <td>13</td>
-      <td>23.102333</td>
-      <td>6.42</td>
-      <td>-0.526000</td>
-      <td>2444.393333</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+|    |   Unnamed: 0 | Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) |   stns jointes |   Tmax |   Tmax90p |   Tmin |   Tmin10p |      DG0 |
+|---:|-------------:|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|---------------:|-------:|----------:|-------:|----------:|---------:|
+|  1 |            1 | BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 |            nan |      5 |   18.9033 |  -3.46 | -19.235   |  860.083 |
+|  3 |            3 | BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 |              1 |     12 |   23.6417 |   4.02 |  -3.646   | 1798.09  |
+|  4 |            4 | BC     | BLIND CHANNEL    | 1021480 |         1958 |           7 |         2016 |           2 |       50.42 |      -125.5  |         23 |            nan |     12 |   20.2007 |   6.78 |   1.09467 | 2518.68  |
+|  5 |            5 | BC     | BLUE RIVER       | 1160899 |         1946 |           9 |         2017 |          12 |       52.13 |      -119.28 |        683 |              1 |     10 |   25.9917 |  -1.13 | -12.5823  |  987.363 |
+|  9 |            9 | BC     | COMOX            | 1021830 |         1935 |          11 |         2017 |          12 |       49.72 |      -124.9  |         26 |              1 |     13 |   23.1023 |   6.42 |  -0.526   | 2444.39  |
 
 
 ### 7.2.6  DataFrame GroupBY method
@@ -6169,152 +1497,13 @@ Let us now create a DataFrame object and perform all the operations on it −
 dataframe = pd.read_csv("./DATA/Climato_Stations_ECCC_1981_2010_YEAR.csv", encoding='latin-1')
 dataframe.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>DG0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>BC</td>
-      <td>AGASSIZ</td>
-      <td>1100120</td>
-      <td>1893</td>
-      <td>1</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>49.25</td>
-      <td>-121.77</td>
-      <td>15</td>
-      <td>N</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>BC</td>
-      <td>ATLIN</td>
-      <td>1200560</td>
-      <td>1905</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>59.57</td>
-      <td>-133.70</td>
-      <td>674</td>
-      <td>N</td>
-      <td>5.630427</td>
-      <td>18.903333</td>
-      <td>-3.460520</td>
-      <td>-19.235000</td>
-      <td>860.083333</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>BC</td>
-      <td>BARKERVILLE</td>
-      <td>1090660</td>
-      <td>1888</td>
-      <td>2</td>
-      <td>2015</td>
-      <td>3</td>
-      <td>53.07</td>
-      <td>-121.52</td>
-      <td>1265</td>
-      <td>N</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>BC</td>
-      <td>BEAVERDELL</td>
-      <td>1130771</td>
-      <td>1939</td>
-      <td>1</td>
-      <td>2006</td>
-      <td>9</td>
-      <td>49.48</td>
-      <td>-119.05</td>
-      <td>838</td>
-      <td>Y</td>
-      <td>12.628017</td>
-      <td>23.641667</td>
-      <td>4.017479</td>
-      <td>-3.646000</td>
-      <td>1798.093333</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>BC</td>
-      <td>BLIND CHANNEL</td>
-      <td>1021480</td>
-      <td>1958</td>
-      <td>7</td>
-      <td>2016</td>
-      <td>2</td>
-      <td>50.42</td>
-      <td>-125.50</td>
-      <td>23</td>
-      <td>N</td>
-      <td>12.155616</td>
-      <td>20.200667</td>
-      <td>6.776893</td>
-      <td>1.094667</td>
-      <td>2518.680000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+|    |   Unnamed: 0 | Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |      Tmax |   Tmax90p |      Tmin |   Tmin10p |      DG0 |
+|---:|-------------:|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|----------:|----------:|----------:|----------:|---------:|
+|  0 |            0 | BC     | AGASSIZ          | 1100120 |         1893 |           1 |         2017 |          12 |       49.25 |      -121.77 |         15 | N              | nan       |  nan      | nan       | nan       |  nan     |
+|  1 |            1 | BC     | ATLIN            | 1200560 |         1905 |           8 |         2017 |          12 |       59.57 |      -133.7  |        674 | N              |   5.63043 |   18.9033 |  -3.46052 | -19.235   |  860.083 |
+|  2 |            2 | BC     | BARKERVILLE      | 1090660 |         1888 |           2 |         2015 |           3 |       53.07 |      -121.52 |       1265 | N              | nan       |  nan      | nan       | nan       |  nan     |
+|  3 |            3 | BC     | BEAVERDELL       | 1130771 |         1939 |           1 |         2006 |           9 |       49.48 |      -119.05 |        838 | Y              |  12.628   |   23.6417 |   4.01748 |  -3.646   | 1798.09  |
+|  4 |            4 | BC     | BLIND CHANNEL    | 1021480 |         1958 |           7 |         2016 |           2 |       50.42 |      -125.5  |         23 | N              |  12.1556  |   20.2007 |   6.77689 |   1.09467 | 2518.68  |
 
 
 Looking at the DataFrame above, we see that there are at least 3 variables that we can use to group our dataset. For example, we can group our data by province (Prov), by year of beginning of recording or year of end of recording.
@@ -6353,9 +1542,6 @@ dataframe.groupby('Prov')
 ```python
 dataframe.groupby('Prov').groups
 ```
-
-
-
 
     {'AB': Int64Index([ 96,  97,  98,  99, 100, 101, 102, 103, 104, 105, 106, 107, 108,
                  109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121,
@@ -6469,152 +1655,13 @@ We can select a single group.
 ```python
 grouped.get_group('QC').head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>DG0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>216</th>
-      <td>216</td>
-      <td>QC</td>
-      <td>AMOS</td>
-      <td>709CEE9</td>
-      <td>1913</td>
-      <td>6</td>
-      <td>2017</td>
-      <td>8</td>
-      <td>48.57</td>
-      <td>-78.13</td>
-      <td>305</td>
-      <td>Y</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>217</th>
-      <td>217</td>
-      <td>QC</td>
-      <td>BAGOTVILLE</td>
-      <td>7060400</td>
-      <td>1880</td>
-      <td>11</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>48.33</td>
-      <td>-71.00</td>
-      <td>159</td>
-      <td>Y</td>
-      <td>8.281390</td>
-      <td>25.297333</td>
-      <td>-1.833594</td>
-      <td>-20.811667</td>
-      <td>1528.413333</td>
-    </tr>
-    <tr>
-      <th>218</th>
-      <td>218</td>
-      <td>QC</td>
-      <td>BEAUCEVILLE</td>
-      <td>7027283</td>
-      <td>1913</td>
-      <td>8</td>
-      <td>2017</td>
-      <td>8</td>
-      <td>46.15</td>
-      <td>-70.70</td>
-      <td>168</td>
-      <td>Y</td>
-      <td>10.551494</td>
-      <td>26.078333</td>
-      <td>-1.376339</td>
-      <td>-19.628333</td>
-      <td>1509.360000</td>
-    </tr>
-    <tr>
-      <th>219</th>
-      <td>219</td>
-      <td>QC</td>
-      <td>BROME</td>
-      <td>7020840</td>
-      <td>1890</td>
-      <td>9</td>
-      <td>2014</td>
-      <td>7</td>
-      <td>45.18</td>
-      <td>-72.57</td>
-      <td>206</td>
-      <td>N</td>
-      <td>11.140937</td>
-      <td>26.176667</td>
-      <td>-0.294151</td>
-      <td>-17.560000</td>
-      <td>1676.226667</td>
-    </tr>
-    <tr>
-      <th>220</th>
-      <td>220</td>
-      <td>QC</td>
-      <td>CAUSAPSCAL</td>
-      <td>7051200</td>
-      <td>1913</td>
-      <td>11</td>
-      <td>2017</td>
-      <td>8</td>
-      <td>48.37</td>
-      <td>-67.23</td>
-      <td>168</td>
-      <td>N</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+|     |   Unnamed: 0 | Prov   | Nom de station   | stnid   |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |      Tmax |   Tmax90p |       Tmin |   Tmin10p |     DG0 |
+|----:|-------------:|:-------|:-----------------|:--------|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|----------:|----------:|-----------:|----------:|--------:|
+| 216 |          216 | QC     | AMOS             | 709CEE9 |         1913 |           6 |         2017 |           8 |       48.57 |       -78.13 |        305 | Y              | nan       |  nan      | nan        |  nan      |  nan    |
+| 217 |          217 | QC     | BAGOTVILLE       | 7060400 |         1880 |          11 |         2017 |          12 |       48.33 |       -71    |        159 | Y              |   8.28139 |   25.2973 |  -1.83359  |  -20.8117 | 1528.41 |
+| 218 |          218 | QC     | BEAUCEVILLE      | 7027283 |         1913 |           8 |         2017 |           8 |       46.15 |       -70.7  |        168 | Y              |  10.5515  |   26.0783 |  -1.37634  |  -19.6283 | 1509.36 |
+| 219 |          219 | QC     | BROME            | 7020840 |         1890 |           9 |         2014 |           7 |       45.18 |       -72.57 |        206 | N              |  11.1409  |   26.1767 |  -0.294151 |  -17.56   | 1676.23 |
+| 220 |          220 | QC     | CAUSAPSCAL       | 7051200 |         1913 |          11 |         2017 |           8 |       48.37 |       -67.23 |        168 | N              | nan       |  nan      | nan        |  nan      |  nan    |
 
 
 #### Aggregations
@@ -6663,144 +1710,22 @@ With grouped Series, you can also pass a list or dict of functions to do aggrega
 ```python
 grouped['Tmin'].agg([np.min, np.mean, np.max, np.std])
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>amin</th>
-      <th>mean</th>
-      <th>amax</th>
-      <th>std</th>
-    </tr>
-    <tr>
-      <th>Prov</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>AB</th>
-      <td>-6.544206</td>
-      <td>-3.050928</td>
-      <td>-0.155900</td>
-      <td>1.401326</td>
-    </tr>
-    <tr>
-      <th>BC</th>
-      <td>-6.068580</td>
-      <td>1.578024</td>
-      <td>7.016292</td>
-      <td>3.896384</td>
-    </tr>
-    <tr>
-      <th>MB</th>
-      <td>-10.094295</td>
-      <td>-4.493900</td>
-      <td>-1.980265</td>
-      <td>2.618348</td>
-    </tr>
-    <tr>
-      <th>N   YT</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>NB</th>
-      <td>-0.491043</td>
-      <td>0.341750</td>
-      <td>0.840796</td>
-      <td>0.598429</td>
-    </tr>
-    <tr>
-      <th>NL</th>
-      <td>-8.024778</td>
-      <td>-1.324334</td>
-      <td>1.812748</td>
-      <td>3.425846</td>
-    </tr>
-    <tr>
-      <th>NS</th>
-      <td>1.214131</td>
-      <td>2.542629</td>
-      <td>3.759460</td>
-      <td>0.982653</td>
-    </tr>
-    <tr>
-      <th>NT</th>
-      <td>-12.451845</td>
-      <td>-8.518655</td>
-      <td>-6.683226</td>
-      <td>2.169370</td>
-    </tr>
-    <tr>
-      <th>NU</th>
-      <td>-21.935075</td>
-      <td>-16.522658</td>
-      <td>-12.233232</td>
-      <td>3.049096</td>
-    </tr>
-    <tr>
-      <th>ON</th>
-      <td>-7.484845</td>
-      <td>0.031970</td>
-      <td>5.918716</td>
-      <td>3.647877</td>
-    </tr>
-    <tr>
-      <th>PE</th>
-      <td>1.986827</td>
-      <td>1.986827</td>
-      <td>1.986827</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>QC</th>
-      <td>-8.768054</td>
-      <td>-1.992695</td>
-      <td>1.622124</td>
-      <td>2.706681</td>
-    </tr>
-    <tr>
-      <th>SK</th>
-      <td>-5.016558</td>
-      <td>-3.208984</td>
-      <td>-1.428850</td>
-      <td>1.030549</td>
-    </tr>
-    <tr>
-      <th>YT</th>
-      <td>-10.217714</td>
-      <td>-8.995421</td>
-      <td>-7.773129</td>
-      <td>1.728582</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+| Prov   |       amin |        mean |       amax |        std |
+|:-------|-----------:|------------:|-----------:|-----------:|
+| AB     |  -6.54421  |  -3.05093   |  -0.1559   |   1.40133  |
+| BC     |  -6.06858  |   1.57802   |   7.01629  |   3.89638  |
+| MB     | -10.0943   |  -4.4939    |  -1.98027  |   2.61835  |
+| N   YT | nan        | nan         | nan        | nan        |
+| NB     |  -0.491043 |   0.34175   |   0.840796 |   0.598429 |
+| NL     |  -8.02478  |  -1.32433   |   1.81275  |   3.42585  |
+| NS     |   1.21413  |   2.54263   |   3.75946  |   0.982653 |
+| NT     | -12.4518   |  -8.51865   |  -6.68323  |   2.16937  |
+| NU     | -21.9351   | -16.5227    | -12.2332   |   3.0491   |
+| ON     |  -7.48484  |   0.0319696 |   5.91872  |   3.64788  |
+| PE     |   1.98683  |   1.98683   |   1.98683  | nan        |
+| QC     |  -8.76805  |  -1.99269   |   1.62212  |   2.70668  |
+| SK     |  -5.01656  |  -3.20898   |  -1.42885  |   1.03055  |
+| YT     | -10.2177   |  -8.99542   |  -7.77313  |   1.72858  |
 
 
 #### Transformations
@@ -6835,92 +1760,10 @@ Filtration filters the data on a defined criteria and returns the subset of data
 dataframe.groupby('Prov').filter(lambda x: len(x) == 1)
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Unnamed: 0</th>
-      <th>Prov</th>
-      <th>Nom de station</th>
-      <th>stnid</th>
-      <th>année déb.</th>
-      <th>mois déb.</th>
-      <th>année fin.</th>
-      <th>mois fin.</th>
-      <th>lat (deg)</th>
-      <th>long (deg)</th>
-      <th>élév (m)</th>
-      <th>stns jointes</th>
-      <th>Tmax</th>
-      <th>Tmax90p</th>
-      <th>Tmin</th>
-      <th>Tmin10p</th>
-      <th>DG0</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>52</th>
-      <td>52</td>
-      <td>N   YT</td>
-      <td>HAINES JUNCTIO</td>
-      <td>2100630</td>
-      <td>1944</td>
-      <td>10</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>60.75</td>
-      <td>-137.50</td>
-      <td>596</td>
-      <td>N</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>274</th>
-      <td>274</td>
-      <td>PE</td>
-      <td>CHARLOTTETOWN</td>
-      <td>8300301</td>
-      <td>1872</td>
-      <td>11</td>
-      <td>2017</td>
-      <td>12</td>
-      <td>46.28</td>
-      <td>-63.13</td>
-      <td>49</td>
-      <td>Y</td>
-      <td>10.00633</td>
-      <td>23.768333</td>
-      <td>1.986827</td>
-      <td>-12.036667</td>
-      <td>1912.156667</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+|     |   Unnamed: 0 | Prov   | Nom de station   |   stnid |   année déb. |   mois déb. |   année fin. |   mois fin. |   lat (deg) |   long (deg) |   élév (m) | stns jointes   |     Tmax |   Tmax90p |      Tmin |   Tmin10p |     DG0 |
+|----:|-------------:|:-------|:-----------------|--------:|-------------:|------------:|-------------:|------------:|------------:|-------------:|-----------:|:---------------|---------:|----------:|----------:|----------:|--------:|
+|  52 |           52 | N   YT | HAINES JUNCTIO   | 2100630 |         1944 |          10 |         2017 |          12 |       60.75 |      -137.5  |        596 | N              | nan      |  nan      | nan       |  nan      |  nan    |
+| 274 |          274 | PE     | CHARLOTTETOWN    | 8300301 |         1872 |          11 |         2017 |          12 |       46.28 |       -63.13 |         49 | Y              |  10.0063 |   23.7683 |   1.98683 |  -12.0367 | 1912.16 |
 
 In the above filter condition, we are asking to return the Provinces which have only one station.
 
@@ -7023,34 +1866,14 @@ The parameters "year", "month" and "day" are mandatory.
 
 The datetime module provides the following classes:
 
-<table border="1" class="docutils">
-<colgroup>
-<col width="27%">
-<col width="57%">
-</colgroup>
-<tbody valign="top">
-   <tr>
-    <th>Classe</th>
-    <th>Description</th>
-  </tr>
-<tr><td><tt class="docutils literal"><span class="pre"><b>datetime.date</b></span></tt></td>
-<td>A date instance represents a date</td>
-</tr>
-<tr><td><tt class="docutils literal"><span class="pre"><b>datetime.datetime</b></span></tt></td>
-<td>An instance of datetime represents a date and time according to the Gregorian calendar
-</td>
-</tr>
-<tr><td><tt class="docutils literal"><span class="pre"><b>datetime.time</b></span></tt></td>
-<td>An instance of time represents the time, except for the date. </td>
-</tr>
-<tr><td><tt class="docutils literal"><span class="pre"><b>datetime.timedelta</b></span></tt></td>
-<td>The timedelta class is used to keep the differences between two temporal or dated objects.</td>
-</tr>
-<tr><td><tt class="docutils literal"><span class="pre"><b>datetime.tzinfo</b></span></tt></td>
-<td>The tzinfo class is used to implement time zone support for time and datetime objects. </td>
-</tr>
-</tbody>
-</table>
+| Class | Description |
+|--|--|
+| <b>datetime.date</b> | A date instance represents a date |
+| <b>datetime.datetime</b> |  An instance of datetime represents a date and time according to the Gregorian calendar |
+| <b>datetime.time</b> |  An instance of time represents the time, except for the date |
+| <b>datetime.timedelta</b> |The timedelta class is used to keep the differences between two temporal or dated objects |
+| <b>datetime.tzinfo</b> |The tzinfo class is used to implement time zone support for time and datetime objects |
+
 
 
 

@@ -25,8 +25,6 @@ menu:
 
 ## List in python
 
-**List**
-
 ## Flow control
 
 ## Functions in Python
@@ -39,4 +37,6 @@ menu:
 
 ## Matplotlib library
 
+## Project 1
 
+## Project 2

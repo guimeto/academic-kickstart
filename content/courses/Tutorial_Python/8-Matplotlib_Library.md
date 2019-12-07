@@ -1,3 +1,4 @@
+
 ---
 title: 8 Matplotlib library
 linktitle: 
@@ -11,9 +12,6 @@ menu:
     weight: 8
 ---
 ![image0](/img/matplotlib.png)
-<img src="./figures/matplotlib.png" alt="Indentation" width="50%" height="50%">
-
-
 
 The Matplotlib library is one of the most used libraries for plotting data in Python.
 
@@ -33,94 +31,13 @@ dataframe_UQAM['Date']=pd.to_datetime(dataframe_UQAM['Date'])
 dataframe_UQAM = dataframe_UQAM.set_index("Date", drop=True)
 dataframe_UQAM.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Temperature minimale</th>
-      <th>Temperature maximale</th>
-      <th>Temperature moyenne</th>
-      <th>Precipitation totale</th>
-      <th>Dir_wind</th>
-      <th>Mod_wind</th>
-    </tr>
-    <tr>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2014-02-01</th>
-      <td>-4.6</td>
-      <td>0.9</td>
-      <td>-1.5</td>
-      <td>0.0</td>
-      <td>244.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>2014-02-02</th>
-      <td>-6.2</td>
-      <td>0.2</td>
-      <td>-3.5</td>
-      <td>0.0</td>
-      <td>163.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>2014-02-03</th>
-      <td>-4.8</td>
-      <td>0.5</td>
-      <td>-1.2</td>
-      <td>0.0</td>
-      <td>255.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>2014-02-04</th>
-      <td>-9.9</td>
-      <td>-4.8</td>
-      <td>-8.0</td>
-      <td>0.0</td>
-      <td>148.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>2014-02-05</th>
-      <td>-9.9</td>
-      <td>-6.3</td>
-      <td>-7.6</td>
-      <td>0.0</td>
-      <td>261.0</td>
-      <td>2.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+| Date                |   Temperature minimale |   Temperature maximale |   Temperature moyenne |   Precipitation totale |   Dir_wind |   Mod_wind |
+|:--------------------|-----------------------:|-----------------------:|----------------------:|-----------------------:|-----------:|-----------:|
+| 2014-02-01 00:00:00 |                   -4.6 |                    0.9 |                  -1.5 |                      0 |        244 |          4 |
+| 2014-02-02 00:00:00 |                   -6.2 |                    0.2 |                  -3.5 |                      0 |        163 |          2 |
+| 2014-02-03 00:00:00 |                   -4.8 |                    0.5 |                  -1.2 |                      0 |        255 |          3 |
+| 2014-02-04 00:00:00 |                   -9.9 |                   -4.8 |                  -8   |                      0 |        148 |          2 |
+| 2014-02-05 00:00:00 |                   -9.9 |                   -6.3 |                  -7.6 |                      0 |        261 |          2 |
 
 
 
@@ -145,7 +62,9 @@ plt.plot() # you create an empty graph or instance and then add layers.
 plt.show()
 ```
 
-![image0](/img/output_6_0.png)
+
+![png](/img/output_6_0.png)
+
 
 ## Add data to our charts
 
@@ -154,93 +73,13 @@ plt.show()
 dataframe_UQAM['2015'].head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Temperature minimale</th>
-      <th>Temperature maximale</th>
-      <th>Temperature moyenne</th>
-      <th>Precipitation totale</th>
-      <th>Dir_wind</th>
-      <th>Mod_wind</th>
-    </tr>
-    <tr>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2015-01-01</th>
-      <td>-13.3</td>
-      <td>-6.4</td>
-      <td>-9.5</td>
-      <td>0.0</td>
-      <td>254.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>2015-01-02</th>
-      <td>-7.3</td>
-      <td>-3.0</td>
-      <td>-4.9</td>
-      <td>0.0</td>
-      <td>231.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>2015-01-03</th>
-      <td>-12.0</td>
-      <td>-3.2</td>
-      <td>-7.8</td>
-      <td>0.0</td>
-      <td>282.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>2015-01-04</th>
-      <td>-15.3</td>
-      <td>-8.7</td>
-      <td>-12.5</td>
-      <td>0.0</td>
-      <td>113.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>2015-01-05</th>
-      <td>-8.8</td>
-      <td>3.9</td>
-      <td>-2.6</td>
-      <td>0.0</td>
-      <td>178.0</td>
-      <td>3.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+| Date                |   Temperature minimale |   Temperature maximale |   Temperature moyenne |   Precipitation totale |   Dir_wind |   Mod_wind |
+|:--------------------|-----------------------:|-----------------------:|----------------------:|-----------------------:|-----------:|-----------:|
+| 2015-01-01 00:00:00 |                  -13.3 |                   -6.4 |                  -9.5 |                      0 |        254 |          3 |
+| 2015-01-02 00:00:00 |                   -7.3 |                   -3   |                  -4.9 |                      0 |        231 |          3 |
+| 2015-01-03 00:00:00 |                  -12   |                   -3.2 |                  -7.8 |                      0 |        282 |          4 |
+| 2015-01-04 00:00:00 |                  -15.3 |                   -8.7 |                 -12.5 |                      0 |        113 |          2 |
+| 2015-01-05 00:00:00 |                   -8.8 |                    3.9 |                  -2.6 |                      0 |        178 |          3 |
 
 
 
@@ -450,109 +289,14 @@ dataframe_UQAM2 = pd.read_csv('./DATA/UQAM_DATA_STATION.csv', parse_dates=["Time
 dataframe_UQAM2.head()
 
 ```
+|    | Time                |   Precipitation |   pressure |   humidex |   Rosee |   Temperature |   Chill |   Humidite |   Dir_wind |   Mod_wind |
+|---:|:--------------------|----------------:|-----------:|----------:|--------:|--------------:|--------:|-----------:|-----------:|-----------:|
+|  0 | 2018-12-09 09:00:00 |            0.14 |       1038 |        -8 |    -7.8 |          -5.1 |      -8 |         81 |        208 |          6 |
+|  1 | 2018-12-09 10:00:00 |            0    |       1039 |        -7 |    -6.7 |          -3.9 |      -7 |         81 |        201 |          6 |
+|  2 | 2018-12-09 11:00:00 |            0    |       1033 |        -5 |    -6   |          -2.7 |      -5 |         78 |        184 |          5 |
+|  3 | 2018-12-09 12:00:00 |            0    |       1018 |        -2 |    -5.8 |          -0.2 |      -3 |         66 |        208 |          8 |
+|  4 | 2018-12-09 13:00:00 |            0    |       1106 |        -2 |    -6   |           0   |      -5 |         64 |        268 |         18 |
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Time</th>
-      <th>Precipitation</th>
-      <th>pressure</th>
-      <th>humidex</th>
-      <th>Rosee</th>
-      <th>Temperature</th>
-      <th>Chill</th>
-      <th>Humidite</th>
-      <th>Dir_wind</th>
-      <th>Mod_wind</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2018-12-09 09:00:00</td>
-      <td>0.14</td>
-      <td>1038.0</td>
-      <td>-8.0</td>
-      <td>-7.8</td>
-      <td>-5.1</td>
-      <td>-8.0</td>
-      <td>81.0</td>
-      <td>208.0</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2018-12-09 10:00:00</td>
-      <td>0.00</td>
-      <td>1039.0</td>
-      <td>-7.0</td>
-      <td>-6.7</td>
-      <td>-3.9</td>
-      <td>-7.0</td>
-      <td>81.0</td>
-      <td>201.0</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2018-12-09 11:00:00</td>
-      <td>0.00</td>
-      <td>1033.0</td>
-      <td>-5.0</td>
-      <td>-6.0</td>
-      <td>-2.7</td>
-      <td>-5.0</td>
-      <td>78.0</td>
-      <td>184.0</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2018-12-09 12:00:00</td>
-      <td>0.00</td>
-      <td>1018.0</td>
-      <td>-2.0</td>
-      <td>-5.8</td>
-      <td>-0.2</td>
-      <td>-3.0</td>
-      <td>66.0</td>
-      <td>208.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2018-12-09 13:00:00</td>
-      <td>0.00</td>
-      <td>1106.0</td>
-      <td>-2.0</td>
-      <td>-6.0</td>
-      <td>0.0</td>
-      <td>-5.0</td>
-      <td>64.0</td>
-      <td>268.0</td>
-      <td>18.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 
 
