@@ -1,8 +1,8 @@
 ---
 # Course title, summary, and position.
-linktitle: Tutorial Python Netcdf
+linktitle: Python Netcdf
 summary: Learn how to use Python from basics .
-weight: 1
+weight: 2
 
 # Page metadata.
 title: Overview
@@ -18,7 +18,7 @@ type: docs  # Do not modify.
 menu:
   example:
     name: Python Netcdf
-    weight: 1
+    weight: 2
 ---
 
 ## Python Netcdf Part1 

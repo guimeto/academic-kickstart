@@ -9,7 +9,7 @@ draft: false
 menu:
   example:
     parent: Python tutorial 
-    weight: 7
+    weight: 1
 ---
 <img src="/img/pandas.png" alt="Indentation" width="30%" height="30%">
 ![image0](/img/pandas.png)

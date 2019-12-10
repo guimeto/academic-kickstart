@@ -1,9 +1,20 @@
 
-<img src="./figures/pylogo.png" alt="Indentation" width="50%" height="50%">
+---
+title: Project 2 ECCC precipitation data
+linktitle: 
+toc: true
+type: docs
+date: "2019-05-05T00:00:00+01:00"
+draft: false
+menu:
+  example:
+    parent: Python tutorial 
+    weight: 1
+---
 
+![image0](/img/pylogo.png)
 
-
-## Project 2: ECCC Precipitation Data
+##  ECCC Precipitation Data
 
 We will continue to discover the functionality of these libraries in a practical case by now analyzing the daily precipitation data recorded by the ECCC stations located at the Montreal Trudeau Airport between the period 1961 and 2010.
 
@@ -366,7 +377,7 @@ plt.show()
 ```
 
 
-![png](output_29_0.png)
+![png](/img/netcdf2_29_0.png)
 
 
 - Histogram: <b>barplot()</b> function
@@ -386,7 +397,7 @@ plt.show()
 ```
 
 
-![png](output_31_0.png)
+![png](/img/netcdf2_31_0.png)
 
 
 - bivariate graph: <b>jointplot()</b> function
@@ -408,7 +419,7 @@ plt.show()
 ```
 
 
-![png](output_33_0.png)
+![png](/img/netcdf2_33_0.png)
 
 
 - bivariate graph: <b>pairplot()</b> function
@@ -441,7 +452,7 @@ plt.show()
 ```
 
 
-![png](output_35_0.png)
+![png](/img/netcdf2_35_0.png)
 
 
 - Correlation matrix:
@@ -506,7 +517,7 @@ plt.show()
 ```
 
 
-![png](output_41_0.png)
+![png](/img/netcdf2_41_0.png)
 
 
 - Graphiques 3D: 
@@ -592,7 +603,7 @@ indice_month=indice_precipitation[["CWD", "SDII", "sum", "Prcp1"]].loc[(indice_p
 from scipy import stats
 import seaborn as sns; sns.set()
 
-g = sns.PairGrid(indice_month[["CWD", "SDII", "sum", "Prcp1"]]) 
+g = sns.PairGrid(indice_month[["CWD", "SDII", "sum", "Prcp1"g]]) 
 
 g.map_upper(corr_pearson) 
 g.map_upper(corr_spearman) 
@@ -604,20 +615,5 @@ plt.show()
 ```
 
 
-![png](output_47_0.png)
+![png](/img/netcdf2_47_0.png)
 
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```

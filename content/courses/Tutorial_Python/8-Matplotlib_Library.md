@@ -9,7 +9,7 @@ draft: false
 menu:
   example:
     parent: Python tutorial 
-    weight: 8
+    weight: 1
 ---
 ![image0](/img/matplotlib.png)
 

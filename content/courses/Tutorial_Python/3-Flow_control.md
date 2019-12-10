@@ -8,7 +8,7 @@ draft: false
 menu:
   example:
     parent: Python tutorial 
-    weight: 3
+    weight: 1
 ---
 ![image0](/img/pylogo.png)
 <img src="./figures/pylogo.png" alt="Indentation" width="50%" height="50%">
@@ -31,7 +31,9 @@ The most popular conditional control statement is ‘if else’, so let’s see 
                                          indentation ---> action 3
          
 - WARNING: python works in indentation
-<img src = "./figures/indentation.png" alt = "Indentation" width = "30%" height = "30%">
+![image0](/img/indentation.png)
+
+
 - Multiple tasks can be assigned in conditional structures.
 
 

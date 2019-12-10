@@ -8,7 +8,7 @@ draft: false
 menu:
   example:
     parent: Python tutorial 
-    weight: 6
+    weight: 1
 ---
 
 <img src="./figures/NumPy_logo.svg" alt="Indentation" width="30%" height="30%">

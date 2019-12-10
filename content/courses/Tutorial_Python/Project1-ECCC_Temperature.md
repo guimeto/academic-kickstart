@@ -9,12 +9,12 @@ draft: false
 menu:
   example:
     parent: Python tutorial 
-    weight: 9
+    weight: 1
 ---
 
 ![image0](/img/pylogo.png)
 
-1: ECCC temperature data
+### 1: ECCC temperature data
 
 In previous sections, we presented how to use the Pandas library which allowed us to process and manipulate data sets. Combining this with Python's Datetime and Matplotlib libraries, we were able to quickly visualize our data.
 
@@ -216,9 +216,7 @@ figure.set_size_inches(15, 10)
 plt.show()
 ```
 
-
-    <Figure size 1500x1000 with 2 Axes>
-
+![image0](/img/netcdf1_20_0.png)
 
 We can improve our display.
 
@@ -233,7 +231,7 @@ plt.show()
 ```
 
 
-![png](/img/output_20_0.png)
+![png](/img/netcdf1_20_0.png)
 
 
 - Other examples: Boxplot,  violin plot, line plot 
@@ -277,7 +275,7 @@ plt.show()
 ```
 
 
-![png](/img/output_26_0.png)
+![png](/img/netcdf1_26_0.png)
 
 
 - Violin plot: 
@@ -292,7 +290,7 @@ plt.show()
 ```
 
 
-![png](/img/output_28_0.png)
+![png](/img/netcdf1_28_0.png)
 
 
 - Line plot: 
@@ -310,7 +308,7 @@ plt.show()
 ```
 
 
-![png](/img/output_30_0.png)
+![png](/img/netcdf1_30_0.png)
 
 
 
@@ -320,7 +318,7 @@ plt.show()
 ```
 
 
-![png](/img/output_31_0.png)
+![png](/img/netcdf1_31_0.png)
 
 
 - We can combine several Seaborn charts:
@@ -340,7 +338,7 @@ plt.show()
 ```
 
 
-![png](/img/output_33_0.png)
+![png](/img/netcdf1_33_0.png)
 
 
 ### 4- Fonction groupby
@@ -626,7 +624,7 @@ plt.show()
 ```
 
 
-![png](/img/output_58_0.png)
+![png](/img/netcdf1_58_0.png)
 
 
 
@@ -672,5 +670,5 @@ plt.show()
 ```
 
 
-![png](/img/output_62_0.png)
+![png](/img/netcdf1_62_0.png)
 
