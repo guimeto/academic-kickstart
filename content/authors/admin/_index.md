@@ -28,13 +28,13 @@ interests:
 
 education:
   courses:
-  - course: DESS in Meteorology
+  - course: Master’s Professional Degree in Meteorology 
     institution: UQAM university
     year: 2006
-  - course: MSc in Ocean Atmosphere et Surface Continentale
+  - course: Master’s Degree in Atmospheric and Oceanographic Sciences 
     institution: Paul Sabatier Toulouse University and Meteo France
     year: 2005
-  - course: BSc in Physics
+  - course: Bachelor’s degree in Physics 
     institution: Beaulieu University Rennes 1 
     year: 2003
 
@@ -59,7 +59,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
 #   icon_pack: ai
-#   link: files/cv.pdf
+#   link: static/files/Guillaume_Dueymes2019.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -71,4 +71,6 @@ user_groups:
 - Visitors
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I am able to discuss and negotiate with scientists/analysts from different backgrounds in order to understand their needs and offer them the best solution and more importantly develop tools that are unanimously accepted. I worked in various environments, ranging in the development of extreme weather indices (droughts, extreme precipitation...), validation of regional climate models, development of epidemiological indices, monitoring of vector disease, analysis of storm trajectories or work on instrumental data.
+I am interested by Open Science and willing to learn about Data Science.
+
